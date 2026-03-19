@@ -1,68 +1,89 @@
-const sections = [
-  {
-    title: "droit du cinéma et de l’audiovisuel",
-    items: [
-      "rédaction et négociation de l’ensemble des contrats de développement, production et exploitation des œuvres cinématographiques et audiovisuelles (courts métrages, longs métrages, documentaires, unitaires télé, séries) :",
-      "contrats d’option, deal memo, long form ;",
-      "contrats d’adaptation audiovisuelle, exploitation dérivée (remake, prequel, sequel, spin-off) ;",
-      "contrats d’auteur·ice·s au forfait, scénaristes, réalisateur·ice·s, compositeur·ice·s ;",
-      "contrats d’artiste-interprètes et de technicien·ne·s (metteur·se·s en scène, directeur·ice·s artistiques) ;",
-      "contrats de production (déléguée, exécutive, coproduction, association à la production) ;",
-      "contrats d’exploitation (mandats de distribution, achats et préachats, ventes internationales) ;",
-      "audit, analyse de contrats et de la chaîne de droits ;",
-      "consultations tout au long du développement, de la production et de l’exploitation des œuvres cinématographiques et audiovisuelles, analyse de risques en matière d’atteinte aux droits de la personnalité, droit à l’image, vie privée, clearance de droits ;",
-      "conseil, assistance et représentation en précontentieux et contentieux concernant tout différend pouvant survenir en lien avec le développement, la production et l’exploitation des œuvres cinématographiques et audiovisuelles.",
-    ],
-  },
-  {
-    title: "mandataire d’artistes",
-    items: [
-      "accompagnement à chaque étape de la création, de la recherche d’un·e producteur·ice ou de la mise en place d’une autoproduction, relecture des étapes d’écriture, visionnage de rushes et bout à bout jusqu’à l’établissement de la version définitive ;",
-      "rédaction et négociation de contrats de cession de droits, coproduction ou association à la production, accompagnement dans le cadre d’autoproductions sur l’ensemble des problématiques juridiques et recherches de financements ;",
-      "défense et protection des droits et intérêts des artistes en précontentieux et contentieux.",
-    ],
-  },
-  {
-    title: "droit de la presse",
-    items: [
-      "relecture d’articles et d’ouvrages en amont afin d’assurer notamment le respect du droit à la vie privée, droit à l’image, respect de l’honneur, de la présomption d’innocence et conformité aux dispositions de la loi du 29 juillet 1881 en matière de délits de presse ;",
-      "conseil, assistance et représentation, en précontentieux et contentieux en matière de diffamation, injure, provocation à la haine, à la discrimination ou à la violence, rédaction de droits de réponse, demande de retraits.",
-    ],
-  },
-  {
-    title: "lutte contre les violences sexistes et sexuelles et toute forme de discrimination",
-    items: [
-      "audit interne et accompagnement dans la mise en place de bonnes pratiques au sein des sociétés de production dès l’écriture et jusqu’à l’issue de la post-production par le biais de :",
-      "l’établissement du DUERP,",
-      "la mise en place d’une procédure interne de signalement,",
-      "l’assistance des référent·e·s VHSS notamment dans l’organisation des actions de sensibilisation et de prévention des VHSS et le traitement des signalements internes ;",
-      "conseil, assistance et représentation de personnes victimes de violences sexistes et sexuelles et de toute forme de discrimination.",
-    ],
-  },
-];
-
-export default function Expertise() {
+export default function Home() {
   return (
     <main className="page">
-      <section className="hero hero-small">
-        <p className="eyebrow">Expertise</p>
-        <h1>
-          Domaines d’intervention
-          <span>Cinéma, audiovisuel, presse et contentieux</span>
-        </h1>
+      <section className="page-intro">
+        <h1 className="page-title">Présentation</h1>
       </section>
 
-      <section className="expertise-list">
-        {sections.map((section) => (
-          <article className="expertise-card" key={section.title}>
-            <h2>{section.title}</h2>
+      <section className="content-grid">
+        <div className="content-main">
+          <p>
+            Avocate au Barreau de Paris depuis 2019, j’ai exercé durant près de
+            cinq années au sein de différents cabinets d’affaires parisiens.
+            J’ai ensuite intégré le service juridique d’une agence artistique de
+            premier plan. Durant deux ans, j’ai ainsi accompagné et conseillé
+            quotidiennement des auteur·ice·s (scénaristes, réalisateur·ice·s) et
+            artistes-interprètes dans la rédaction et la négociation des
+            contrats relatifs à la création d’œuvres cinématographiques et
+            audiovisuelles (courts métrages, longs métrages, documentaires,
+            unitaires télé, séries).
+          </p>
+
+          <p>
+            La variété de mes expériences professionnelles m’a permis de
+            développer, outre une réelle agilité et une grande capacité
+            d’adaptation, des compétences approfondies en droit de la propriété
+            intellectuelle – avec une expertise particulière en droit d’auteur
+            dans le secteur du cinéma et de l’audiovisuel – et en droit de la
+            presse, tant en conseil qu’en précontentieux et contentieux.
+          </p>
+
+          <p>
+            Forte d’une riche activité contentieuse, je suis en mesure de vous
+            accompagner pleinement dans la gestion de tout litige, de la
+            tentative de conciliation à la saisine et la représentation en
+            justice devant les juridictions civiles, commerciales et pénales.
+          </p>
+
+          <p>
+            Mon intérêt pour la création artistique et notamment
+            cinématographique m’a par ailleurs permis de développer une
+            connaissance approfondie de ce secteur, au-delà des enjeux juridiques
+            qui lui sont propre, me permettant d’avoir une approche globale et
+            inventive de chaque projet.
+          </p>
+
+          <p>
+            Je souhaite également mettre au centre de mon activité
+            professionnelle mon engagement dans la lutte contre les violences
+            sexistes et sexuelles et toute forme de discrimination, notamment en
+            participant à la mise en place d’actions de sensibilisation et de
+            prévention mais plus généralement en conservant toujours cette
+            grille de lecture dans la gestion de l’ensemble des sujets traités.
+          </p>
+
+          <p>
+            Mon objectif est d’accompagner et sécuriser la fabrication de
+            projets indépendants et exigeants tout en offrant à chaque personne
+            qui participe au processus créatif les meilleures conditions de
+            travail.
+          </p>
+
+          <p>
+            N’hésitez pas à me contacter afin que nous puissions déterminer
+            ensemble les modalités d’intervention correspondant le mieux à votre
+            situation et vos projets.
+          </p>
+        </div>
+
+        <aside className="content-side">
+          <div className="side-card">
+            <p className="side-label">Domaines</p>
             <ul>
-              {section.items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
+              <li>Droit du cinéma et de l’audiovisuel</li>
+              <li>Mandataire d’artistes</li>
+              <li>Droit de la presse</li>
+              <li>VHSS et discriminations</li>
             </ul>
-          </article>
-        ))}
+          </div>
+
+          <div className="side-card">
+            <p className="side-label">Contact</p>
+            <p>06 71 17 84 05</p>
+            <p>clairelise@clg-avocate.com</p>
+            <p>5 rue d’Aboukir – 75002 Paris</p>
+          </div>
+        </aside>
       </section>
     </main>
   );

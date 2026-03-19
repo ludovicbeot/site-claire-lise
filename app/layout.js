@@ -1,6 +1,7 @@
 import "./globals.css";
 import Link from "next/link";
-import { Cormorant_Garamond, Caveat } from "next/font/google";
+import { Cormorant_Garamond, Allura } from "next/font/google";
+import Header from "../components/Header";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -8,9 +9,9 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-serif",
 });
 
-const caveat = Caveat({
+const allura = Allura({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
   variable: "--font-script",
 });
 
@@ -21,30 +22,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className={`${cormorant.variable} ${caveat.variable}`}>
+    <html lang="fr" className={`${cormorant.variable} ${allura.variable}`}>
       <body>
         <div className="site-shell">
-          <header className="site-header">
-            <div className="header-top">
-              <Link href="/" className="brand">
-                Claire-Lise Gaudelet
-              </Link>
-              <p className="brand-subtitle">Avocate au Barreau de Paris</p>
-            </div>
-
-            <nav className="main-nav">
-              <Link href="/">présentation</Link>
-              <Link href="/expertise">expertise</Link>
-              <Link href="/contact">contact</Link>
-            </nav>
-          </header>
+          <Header />
 
           {children}
 
           <footer className="site-footer">
             <div className="footer-inner">
               <p>Claire-Lise Gaudelet — Avocate au Barreau de Paris</p>
-              <Link href="/mention-legales">mentions légales</Link>
+              <Link href="/mentions-legales">mentions légales</Link>
             </div>
           </footer>
         </div>

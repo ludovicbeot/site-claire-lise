@@ -1,12 +1,8 @@
 export default function MentionsLegales() {
   return (
     <main className="page">
-      <section className="hero hero-small">
-        <p className="eyebrow">Mentions légales</p>
-        <h1>
-          Informations légales
-          <span>Édition et hébergement du site</span>
-        </h1>
+      <section className="page-intro">
+        <h1 className="page-title">Mentions légales</h1>
       </section>
 
       <section className="legal-grid">

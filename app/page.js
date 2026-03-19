@@ -1,12 +1,8 @@
 export default function Home() {
   return (
     <main className="page">
-      <section className="hero">
-        <p className="eyebrow">Présentation</p>
-        <h1>
-          Claire-Lise Gaudelet
-          <span>Avocate au Barreau de Paris</span>
-        </h1>
+      <section className="page-intro">
+        <h1 className="page-title">Présentation</h1>
       </section>
 
       <section className="content-grid">

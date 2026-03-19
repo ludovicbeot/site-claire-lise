@@ -1,12 +1,8 @@
 export default function Contact() {
   return (
     <main className="page">
-      <section className="hero hero-small">
-        <p className="eyebrow">Contact</p>
-        <h1>
-          Claire-Lise Gaudelet
-          <span>Avocate au Barreau de Paris</span>
-        </h1>
+      <section className="page-intro">
+        <h1 className="page-title">Contact</h1>
       </section>
 
       <section className="contact-card">
