@@ -10,10 +10,13 @@ export default function Header() {
 
   return (
     <header className="site-header">
-      <div className="site-header-inner">
-        <Link href="/" className="brand">
-          Claire-Lise Gaudelet
-        </Link>
+      <div className="site-header-top">
+        <div className="brand-block">
+          <Link href="/" className="brand">
+            Claire-Lise Gaudelet
+          </Link>
+          <p className="brand-subtitle">Avocate au Barreau de Paris</p>
+        </div>
 
         <nav className="main-nav" aria-label="Navigation principale">
           <Link href="/" className={isActive("/") ? "nav-link active" : "nav-link"}>
