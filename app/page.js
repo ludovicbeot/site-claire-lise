@@ -5,9 +5,9 @@ export default function Home() {
         <h1 className="page-title">Présentation</h1>
       </section>
 
-      <section className="home-composition">
-        <div className="home-main">
-          <article className="intro-panel intro-panel--hero">
+      <section className="home-layout">
+        <article className="presentation-block">
+          <div className="presentation-inner">
             <p>
               Avocate au Barreau de Paris depuis 2019, j’ai exercé durant près de
               cinq années au sein de différents cabinets d’affaires parisiens.
@@ -19,9 +19,7 @@ export default function Home() {
               audiovisuelles (courts métrages, longs métrages, documentaires,
               unitaires télé, séries).
             </p>
-          </article>
 
-          <article className="intro-panel intro-panel--aside">
             <p>
               La variété de mes expériences professionnelles m’a permis de
               développer, outre une réelle agilité et une grande capacité
@@ -30,18 +28,14 @@ export default function Home() {
               dans le secteur du cinéma et de l’audiovisuel – et en droit de la
               presse, tant en conseil qu’en précontentieux et contentieux.
             </p>
-          </article>
 
-          <article className="intro-panel intro-panel--medium">
             <p>
               Forte d’une riche activité contentieuse, je suis en mesure de vous
               accompagner pleinement dans la gestion de tout litige, de la
               tentative de conciliation à la saisine et la représentation en
               justice devant les juridictions civiles, commerciales et pénales.
             </p>
-          </article>
 
-          <article className="intro-panel intro-panel--medium">
             <p>
               Mon intérêt pour la création artistique et notamment
               cinématographique m’a par ailleurs permis de développer une
@@ -49,9 +43,7 @@ export default function Home() {
               qui lui sont propre, me permettant d’avoir une approche globale et
               inventive de chaque projet.
             </p>
-          </article>
 
-          <article className="intro-panel intro-panel--wide">
             <p>
               Je souhaite également mettre au centre de mon activité
               professionnelle mon engagement dans la lutte contre les violences
@@ -60,9 +52,7 @@ export default function Home() {
               prévention mais plus généralement en conservant toujours cette
               grille de lecture dans la gestion de l’ensemble des sujets traités.
             </p>
-          </article>
 
-          <article className="intro-panel intro-panel--cta">
             <p>
               Mon objectif est d’accompagner et sécuriser la fabrication de
               projets indépendants et exigeants tout en offrant à chaque personne
@@ -75,8 +65,8 @@ export default function Home() {
               ensemble les modalités d’intervention correspondant le mieux à votre
               situation et vos projets.
             </p>
-          </article>
-        </div>
+          </div>
+        </article>
 
         <aside className="content-side">
           <div className="side-card side-card--domains">
