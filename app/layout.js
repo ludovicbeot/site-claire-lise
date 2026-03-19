@@ -1,18 +1,18 @@
 import "./globals.css";
 import Link from "next/link";
-import { Cormorant_Garamond, Allura } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import Header from "../components/Header";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-serif",
 });
 
-const allura = Allura({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-script",
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-sans",
 });
 
 export const metadata = {
@@ -22,20 +22,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className={`${cormorant.variable} ${allura.variable}`}>
+    <html lang="fr" className={`${cormorant.variable} ${inter.variable}`}>
       <body>
-        <div className="site-shell">
-          <Header />
+        <Header />
 
-          {children}
+        {children}
 
-          <footer className="site-footer">
-            <div className="footer-inner">
-              <p>Claire-Lise Gaudelet — Avocate au Barreau de Paris</p>
-              <Link href="/mentions-legales">mentions légales</Link>
-            </div>
-          </footer>
-        </div>
+        <footer className="site-footer">
+          <div className="footer-inner">
+            <p>Claire-Lise Gaudelet — Avocate au Barreau de Paris</p>
+            <Link href="/mentions-legales">mentions légales</Link>
+          </div>
+        </footer>
       </body>
     </html>
   );
