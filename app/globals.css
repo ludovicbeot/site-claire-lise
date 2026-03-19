@@ -49,8 +49,11 @@ a {
 p,
 li {
   margin: 0;
-  font-size: 1.02rem;
-  line-height: 1.88;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 1rem;
+  line-height: 1.82;
+  font-weight: 400;
+  letter-spacing: -0.005em;
 }
 
 .site-frame {
@@ -68,6 +71,8 @@ li {
   box-shadow: var(--shadow);
   overflow: hidden;
 }
+
+/* HEADER */
 
 .site-header {
   padding: 24px 30px 18px;
@@ -141,6 +146,8 @@ li {
   background: var(--text);
 }
 
+/* PAGE */
+
 .page {
   padding: 24px 30px 40px;
 }
@@ -161,6 +168,8 @@ li {
   font-weight: 500;
   letter-spacing: -0.045em;
 }
+
+/* HOME */
 
 .home-layout {
   display: grid;
@@ -205,16 +214,20 @@ li {
 
 .presentation-inner p {
   break-inside: avoid;
-  margin: 0 0 1.35em;
-  font-size: 1.02rem;
-  line-height: 1.95;
+  margin: 0 0 1.4em;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
+  font-weight: 400;
+  letter-spacing: -0.005em;
 }
 
 .presentation-inner p:first-child {
-  font-family: var(--font-serif), serif;
-  font-size: 1.14rem;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 1.03rem;
   line-height: 1.92;
-  letter-spacing: -0.015em;
+  font-weight: 500;
+  letter-spacing: -0.008em;
 }
 
 .content-side {
@@ -287,6 +300,9 @@ li {
 .side-card li {
   position: relative;
   padding-left: 18px;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.7;
 }
 
 .side-card li::before {
@@ -298,34 +314,61 @@ li {
 }
 
 .side-card p + p {
-  margin-top: 14px;
+  margin-top: 12px;
 }
 
-.expertise-list {
+/* EXPERTISE */
+
+.expertise-layout {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 22px;
+  align-items: start;
 }
 
 .expertise-card {
-  padding: 28px 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 252, 248, 0.94) 0%,
+    rgba(245, 239, 231, 0.88) 100%
+  );
+  border: 1px solid rgba(25, 22, 20, 0.08);
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  padding: 30px 28px 32px;
   min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.expertise-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 8px;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 22, 20, 0.12),
+    rgba(25, 22, 20, 0.02)
+  );
 }
 
 .expertise-card h2,
 .legal-card h2 {
-  margin: 0 0 18px;
+  margin: 0 0 20px;
+  padding-left: 4px;
   font-family: var(--font-serif), serif;
-  font-size: 1.55rem;
+  font-size: 1.65rem;
   line-height: 1.05;
   font-weight: 500;
   letter-spacing: -0.04em;
+  max-width: 90%;
 }
 
 .expertise-card ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 4px;
   display: grid;
   gap: 14px;
 }
@@ -333,6 +376,10 @@ li {
 .expertise-card li {
   position: relative;
   padding-left: 18px;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--text);
 }
 
 .expertise-card li::before {
@@ -342,6 +389,8 @@ li {
   top: 0;
   color: var(--accent);
 }
+
+/* CONTACT */
 
 .contact-card {
   padding: 6px 28px;
@@ -368,6 +417,8 @@ li {
   letter-spacing: 0.12em;
 }
 
+/* MENTIONS LEGALES */
+
 .legal-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -379,6 +430,8 @@ li {
   display: grid;
   gap: 10px;
 }
+
+/* FOOTER */
 
 .site-footer {
   padding: 0 30px 22px;
@@ -405,6 +458,8 @@ li {
   text-underline-offset: 3px;
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 1220px) {
   .home-layout {
     grid-template-columns: 1fr;
@@ -418,7 +473,8 @@ li {
     min-height: auto;
   }
 
-  .expertise-list {
+  .expertise-layout,
+  .legal-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -438,12 +494,7 @@ li {
     padding: 28px 28px 30px 36px;
   }
 
-  .content-side,
-  .legal-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .expertise-list {
+  .content-side {
     grid-template-columns: 1fr;
   }
 }
@@ -471,7 +522,9 @@ li {
   }
 
   .presentation-block,
-  .side-card {
+  .side-card,
+  .expertise-card,
+  .legal-card {
     border-radius: 20px;
   }
 
@@ -490,7 +543,11 @@ li {
   }
 
   .presentation-inner p:first-child {
-    font-size: 1.06rem;
+    font-size: 1rem;
+  }
+
+  .contact-card {
+    padding: 6px 18px;
   }
 
   .contact-row {
@@ -501,10 +558,24 @@ li {
 
   .side-card,
   .expertise-card,
-  .legal-card,
-  .contact-card {
+  .legal-card {
     padding-left: 18px;
     padding-right: 18px;
+  }
+
+  .expertise-card {
+    padding-top: 22px;
+    padding-bottom: 24px;
+  }
+
+  .expertise-card h2 {
+    font-size: 1.4rem;
+    max-width: 100%;
+  }
+
+  .expertise-card li {
+    font-size: 0.96rem;
+    line-height: 1.7;
   }
 
   p,
