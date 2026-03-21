@@ -21,16 +21,14 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://use.typekit.net/jkf6bti.css" />
       </head>
       <body>
-        <div className="site-frame">
-          <Header />
-          {children}
-          <footer className="site-footer">
-            <div className="footer-inner">
-              <p>Claire-Lise Gaudelet — Avocate au Barreau de Paris</p>
-              <Link href="/mentions-legales">mentions légales</Link>
-            </div>
-          </footer>
-        </div>
+        <Header />
+        <main className="shell">{children}</main>
+        <footer className="site-footer shell">
+          <div className="footer-inner">
+            <p>Claire-Lise Gaudelet — Avocate au Barreau de Paris</p>
+            <Link href="/mentions-legales">mentions légales</Link>
+          </div>
+        </footer>
       </body>
     </html>
   );

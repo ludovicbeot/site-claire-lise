@@ -76,36 +76,35 @@ b {
 }
 
 .site-frame {
-  width: min(calc(100% - 28px), var(--max-width));
-  margin: 14px auto;
-  min-height: calc(100vh - 28px);
-  border: 1px solid var(--line-light);
-  border-radius: 30px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.045),
-    rgba(255, 255, 255, 0.02)
-  );
-  backdrop-filter: blur(14px);
-  box-shadow: var(--shadow);
-  overflow: hidden;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  min-height: 100vh;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  overflow: visible;
 }
 
 /* HEADER */
 
 .site-header {
-  padding: 24px 30px 18px;
-  background: rgba(255, 255, 255, 0.025);
-  backdrop-filter: blur(12px);
+  padding: 0;
+  background: transparent;
+  backdrop-filter: none;
 }
 
 .site-header-top {
+  width: min(100% - 56px, 1680px);
+  margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 30px;
+  gap: 40px;
   align-items: end;
-  border-bottom: 1px solid var(--line-light);
-  padding-bottom: 18px;
+  padding: 30px 0 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .brand-block {
@@ -174,7 +173,7 @@ b {
 /* PAGE */
 
 .page {
-  padding: 24px 30px 40px;
+  padding: 28px 0 48px;
 }
 
 .page-intro {
@@ -199,22 +198,22 @@ b {
 
 .home-layout {
   display: grid;
-  grid-template-columns: minmax(0, 2.25fr) minmax(320px, 0.92fr);
-  gap: 22px;
+  grid-template-columns: minmax(0, 2.8fr) minmax(340px, 0.95fr);
+  gap: 28px;
   align-items: start;
 }
 
 .presentation-block {
   position: relative;
   overflow: hidden;
-  min-height: 640px;
+  min-height: 560px;
   background: linear-gradient(
     180deg,
     var(--surface-strong) 0%,
     var(--surface-muted) 100%
   );
   border: 1px solid var(--line);
-  border-radius: 30px;
+  border-radius: 26px;
   box-shadow: var(--shadow-soft);
 }
 
@@ -234,9 +233,9 @@ b {
 }
 
 .presentation-inner {
-  padding: 40px 40px 44px 54px;
+  padding: 42px 44px 42px 54px;
   column-count: 2;
-  column-gap: 42px;
+  column-gap: 54px;
 }
 
 .presentation-inner p {
