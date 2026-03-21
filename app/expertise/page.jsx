@@ -1,8 +1,8 @@
 const sections = [
   {
     title: "Droit du cinéma et de l’audiovisuel",
+    lead: "Rédaction et négociation de l’ensemble des contrats de développement, production et exploitation des œuvres cinématographiques et audiovisuelles (courts métrages, longs métrages, documentaires, unitaires télé, séries) :",
     items: [
-      "Rédaction et négociation de l’ensemble des contrats de développement, production et exploitation des œuvres cinématographiques et audiovisuelles (courts métrages, longs métrages, documentaires, unitaires télé, séries) :",
       "contrats d’option, deal memo, long form ;",
       "contrats d’adaptation audiovisuelle, exploitation dérivée (remake, prequel, sequel, spin-off) ;",
       "contrats d’auteur·ice·s au forfait, scénaristes, réalisateur·ice·s, compositeur·ice·s ;",
@@ -16,24 +16,24 @@ const sections = [
   },
   {
     title: "Mandataire d’artistes",
+    lead: "Accompagnement à chaque étape de la création, de la recherche d’un·e producteur·ice ou de la mise en place d’une autoproduction, relecture des étapes d’écriture, visionnage de rushes et bout à bout jusqu’à l’établissement de la version définitive ;",
     items: [
-      "Accompagnement à chaque étape de la création, de la recherche d’un·e producteur·ice ou de la mise en place d’une autoproduction, relecture des étapes d’écriture, visionnage de rushes et bout à bout jusqu’à l’établissement de la version définitive ;",
       "rédaction et négociation de contrats de cession de droits, coproduction ou association à la production, accompagnement dans le cadre d’autoproductions sur l’ensemble des problématiques juridiques et recherches de financements ;",
       "défense et protection des droits et intérêts des artistes en précontentieux et contentieux.",
     ],
   },
   {
     title: "Droit de la presse",
+    lead: "Relecture d’articles et d’ouvrages en amont afin d’assurer notamment le respect du droit à la vie privée, droit à l’image, respect de l’honneur, de la présomption d’innocence et conformité aux dispositions de la loi du 29 juillet 1881 en matière de délits de presse ;",
     items: [
-      "Relecture d’articles et d’ouvrages en amont afin d’assurer notamment le respect du droit à la vie privée, droit à l’image, respect de l’honneur, de la présomption d’innocence et conformité aux dispositions de la loi du 29 juillet 1881 en matière de délits de presse ;",
       "conseil, assistance et représentation, en précontentieux et contentieux en matière de diffamation, injure, provocation à la haine, à la discrimination ou à la violence, rédaction de droits de réponse, demande de retraits.",
     ],
   },
   {
     title:
       "Lutte contre les violences sexistes et sexuelles et toute forme de discrimination",
+    lead: "Audit interne et accompagnement dans la mise en place de bonnes pratiques au sein des sociétés de production dès l’écriture et jusqu’à l’issue de la post-production par le biais de :",
     items: [
-      "Audit interne et accompagnement dans la mise en place de bonnes pratiques au sein des sociétés de production dès l’écriture et jusqu’à l’issue de la post-production par le biais de :",
       "l’établissement du DUERP ;",
       "la mise en place d’une procédure interne de signalement ;",
       "l’assistance des référent·e·s VHSS notamment dans l’organisation des actions de sensibilisation et de prévention des VHSS et le traitement des signalements internes ;",
@@ -43,48 +43,27 @@ const sections = [
 ];
 
 export default function ExpertisePage() {
-  const [mainSection, ...secondarySections] = sections;
-
   return (
     <main className="page">
       <section className="page-intro">
         <h1 className="page-title">Expertise</h1>
       </section>
 
-      <section className="expertise-main">
-        <article className="expertise-card expertise-card--main">
-          <div className="expertise-card-top">
-            <h2>{mainSection.title}</h2>
-            <p className="expertise-lead">{mainSection.items[0]}</p>
-          </div>
+      <section className="expertise-grid-2x2 reveal-soft">
+        {sections.map((section) => (
+          <article className="expertise-card expertise-card--equal" key={section.title}>
+            <div className="expertise-card-top">
+              <h2>{section.title}</h2>
+              <p className="expertise-lead">{section.lead}</p>
+            </div>
 
-          <ul className="expertise-list">
-            {mainSection.items.slice(1).map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </article>
-      </section>
-
-      <section className="expertise-layout">
-        {secondarySections.map((section) => {
-          const [lead, ...details] = section.items;
-
-          return (
-            <article className="expertise-card" key={section.title}>
-              <div className="expertise-card-top">
-                <h2>{section.title}</h2>
-                <p className="expertise-lead">{lead}</p>
-              </div>
-
-              <ul className="expertise-list">
-                {details.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          );
-        })}
+            <ul className="expertise-list">
+              {section.items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </section>
     </main>
   );

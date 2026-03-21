@@ -255,20 +255,33 @@ b {
 .presentation-wide {
   display: grid;
   grid-template-columns: minmax(0, 1.75fr) 280px;
-  gap: 56px;
+  gap: 32px;
   align-items: start;
+}
+
+.presentation-frame {
+  padding: 34px 32px 36px;
+  border: 1px solid rgba(232, 226, 221, 0.12);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(
+    180deg,
+    rgba(232, 226, 221, 0.05) 0%,
+    rgba(232, 226, 221, 0.02) 100%
+  );
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-soft);
 }
 
 .presentation-main {
   display: grid;
-  gap: 14px;
-  max-width: 1280px;
+  gap: 8px;
+  max-width: none;
 }
 
 .presentation-row {
   position: relative;
   margin: 0;
-  padding: 18px 22px 18px 28px;
+  padding: 18px 10px 18px 28px;
   max-width: none;
   font-size: 1.08rem;
   line-height: 1.95;
@@ -316,12 +329,11 @@ b {
   font-size: clamp(1.18rem, 1.2vw, 1.34rem);
   line-height: 1.9;
   color: rgba(243, 237, 232, 0.96);
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 8px;
 }
 
 .presentation-row--closing {
-  margin-top: 10px;
+  margin-top: 8px;
   padding-top: 24px;
   border-top: 1px solid rgba(232, 226, 221, 0.08);
 }
@@ -412,21 +424,17 @@ b {
    EXPERTISE
 ========================= */
 
-.expertise-main {
-  margin-bottom: 40px;
-}
-
-.expertise-layout {
+.expertise-grid-2x2 {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .expertise-card {
-  padding: 26px 22px 26px;
+  padding: 28px 24px 28px;
   border: 1px solid var(--panel-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   background: linear-gradient(
     180deg,
     rgba(232, 226, 221, 0.045) 0%,
@@ -451,15 +459,10 @@ b {
   );
 }
 
-.expertise-card--main {
-  padding: 36px 32px 34px;
-  border: 1px solid var(--panel-border-strong);
-  background: linear-gradient(
-    180deg,
-    rgba(232, 226, 221, 0.055) 0%,
-    rgba(232, 226, 221, 0.025) 100%
-  );
-  backdrop-filter: blur(14px);
+.expertise-card--equal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .expertise-card-top {
@@ -472,23 +475,18 @@ b {
 .legal-card h2 {
   margin: 0;
   font-family: var(--font-serif), serif;
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   line-height: 1.08;
   font-weight: 500;
   letter-spacing: -0.04em;
   color: var(--ivory);
 }
 
-.expertise-card--main h2 {
-  font-size: 2rem;
-  line-height: 1.02;
-}
-
 .expertise-lead {
   font-size: 0.98rem;
-  line-height: 1.75;
+  line-height: 1.8;
   color: var(--text);
-  max-width: 60ch;
+  max-width: none;
 }
 
 .expertise-list {
@@ -504,7 +502,7 @@ b {
   position: relative;
   padding-left: 18px;
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.72;
   color: var(--text-soft);
 }
 
@@ -684,7 +682,7 @@ b {
     max-width: none;
   }
 
-  .expertise-layout,
+  .expertise-grid-2x2,
   .legal-grid {
     grid-template-columns: 1fr;
   }
@@ -707,10 +705,15 @@ b {
     grid-template-columns: 1fr;
   }
 
+  .presentation-frame {
+    padding: 24px 18px 26px;
+    border-radius: 20px;
+  }
+
   .presentation-row,
   .presentation-row--lead {
     padding-left: 22px;
-    padding-right: 10px;
+    padding-right: 6px;
   }
 
   .presentation-row {
@@ -758,18 +761,6 @@ b {
   .legal-card {
     padding: 20px 18px 22px;
     border-radius: 16px;
-  }
-
-  .expertise-main {
-    margin-bottom: 28px;
-  }
-
-  .expertise-card--main {
-    padding: 24px 20px;
-  }
-
-  .expertise-card--main h2 {
-    font-size: 1.6rem;
   }
 
   .expertise-card h2,
