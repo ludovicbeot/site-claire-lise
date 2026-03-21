@@ -234,100 +234,107 @@ b {
    PAGE PRÉSENTATION
 ========================= */
 
+/* =========================
+   PAGE PRÉSENTATION
+========================= */
+
 .presentation-page {
-  padding-top: 56px;
+  padding-top: 52px;
 }
 
 .page-intro--presentation {
   display: grid;
   gap: 16px;
-  margin-bottom: 42px;
+  margin-bottom: 34px;
 }
 
-.presentation-editorial {
+.presentation-wide {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) 300px;
-  gap: 64px;
+  grid-template-columns: minmax(0, 1.75fr) 280px;
+  gap: 56px;
   align-items: start;
 }
 
-.presentation-editorial-main {
-  position: relative;
-  max-width: 920px;
-  padding-right: 10px;
+.presentation-main {
+  display: grid;
+  gap: 14px;
+  max-width: 1280px;
 }
 
-.presentation-editorial-main::before {
+.presentation-row {
+  position: relative;
+  margin: 0;
+  padding: 18px 22px 18px 28px;
+  max-width: none;
+  font-size: 1.08rem;
+  line-height: 1.95;
+  color: rgba(244, 238, 232, 0.82);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  transition:
+    color 0.24s ease,
+    border-color 0.24s ease,
+    transform 0.24s ease,
+    background 0.24s ease;
+}
+
+.presentation-row::before {
   content: "";
   position: absolute;
-  left: -28px;
-  top: 8px;
-  bottom: 8px;
-  width: 1px;
+  left: 0;
+  top: 18px;
+  width: 0;
+  height: calc(100% - 36px);
   background: linear-gradient(
     180deg,
-    rgba(204, 179, 161, 0.55) 0%,
-    rgba(204, 179, 161, 0.08) 100%
+    rgba(204, 179, 161, 0.9) 0%,
+    rgba(204, 179, 161, 0.25) 100%
+  );
+  transition: width 0.24s ease;
+}
+
+.presentation-row:hover {
+  color: rgba(244, 238, 232, 0.98);
+  border-left-color: rgba(255, 255, 255, 0.18);
+  transform: translateX(6px);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.012) 38%,
+    rgba(255, 255, 255, 0) 100%
   );
 }
 
-.presentation-paragraph {
-  margin: 0;
-  max-width: 35em;
-  font-size: 1.08rem;
-  line-height: 2;
-  color: rgba(244, 238, 232, 0.84);
-  text-wrap: pretty;
+.presentation-row:hover::before {
+  width: 2px;
 }
 
-.presentation-paragraph + .presentation-paragraph {
-  margin-top: 2.1rem;
-}
-
-.presentation-paragraph--lead {
-  max-width: 34em;
-  font-size: clamp(1.16rem, 1.35vw, 1.34rem);
-  line-height: 1.95;
+.presentation-row--lead {
+  font-size: clamp(1.18rem, 1.2vw, 1.34rem);
+  line-height: 1.9;
   color: rgba(244, 238, 232, 0.96);
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
 
-.presentation-paragraph--closing {
-  margin-top: 2.8rem;
-  padding-top: 1.4rem;
+.presentation-row--closing {
+  margin-top: 10px;
+  padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  color: rgba(244, 238, 232, 0.96);
 }
 
-.text-mark {
-  color: #f4eee8;
-  font-weight: 500;
-  background-image: linear-gradient(
-    180deg,
-    transparent 62%,
-    rgba(204, 179, 161, 0.16) 62%
-  );
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  padding: 0 0.08em;
+.presentation-row--closing::before {
+  top: 24px;
+  height: calc(100% - 48px);
 }
 
-.text-mark--strong {
-  font-weight: 600;
-  background-image: linear-gradient(
-    180deg,
-    transparent 58%,
-    rgba(204, 179, 161, 0.24) 58%
-  );
-}
-
-.presentation-aside {
+.presentation-side {
   position: sticky;
-  top: 32px;
+  top: 28px;
   display: grid;
   gap: 18px;
 }
 
-.presentation-aside-block {
+.presentation-side-block {
   padding: 20px 20px 22px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
@@ -338,9 +345,23 @@ b {
   );
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease;
 }
 
-.presentation-aside-label {
+.presentation-side-block:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.14);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+}
+
+.presentation-side-label {
   margin-bottom: 14px;
   font-family: var(--font-serif), serif;
   font-size: 1.35rem;
@@ -348,15 +369,15 @@ b {
   color: var(--text);
 }
 
-.presentation-aside-block p {
+.presentation-side-block p {
   color: rgba(244, 238, 232, 0.78);
 }
 
-.presentation-aside-block p + p {
+.presentation-side-block p + p {
   margin-top: 9px;
 }
 
-.presentation-aside-block ul {
+.presentation-side-block ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -364,7 +385,7 @@ b {
   gap: 12px;
 }
 
-.presentation-aside-block li {
+.presentation-side-block li {
   position: relative;
   padding-left: 18px;
   font-size: 0.96rem;
@@ -372,7 +393,7 @@ b {
   color: rgba(244, 238, 232, 0.78);
 }
 
-.presentation-aside-block li::before {
+.presentation-side-block li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -381,6 +402,81 @@ b {
   height: 6px;
   border-radius: 50%;
   background: rgba(204, 179, 161, 0.92);
+}
+
+/* Apparitions discrètes */
+
+.reveal-soft {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: revealSoft 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.reveal-delay-1 {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: revealSoft 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.16s;
+}
+
+.reveal-delay-2 {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: revealSoft 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.28s;
+}
+
+@keyframes revealSoft {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1240px) {
+  .presentation-wide {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .presentation-side {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .presentation-main {
+    max-width: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .presentation-side {
+    grid-template-columns: 1fr;
+  }
+
+  .presentation-row,
+  .presentation-row--lead {
+    padding-left: 22px;
+    padding-right: 10px;
+  }
+
+  .presentation-row {
+    font-size: 1rem;
+    line-height: 1.86;
+  }
+
+  .presentation-row--lead {
+    font-size: 1.08rem;
+    line-height: 1.84;
+  }
+
+  .presentation-row:hover {
+    transform: translateX(3px);
+  }
 }
 
 /* =========================
