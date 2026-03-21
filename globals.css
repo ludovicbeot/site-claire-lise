@@ -27,12 +27,6 @@
   --line: rgba(232, 226, 221, 0.08);
   --line-strong: rgba(232, 226, 221, 0.14);
 
-  --presentation-beige: #e8e2dd;
-  --presentation-beige-soft: #ddd3cc;
-  --presentation-brown: #241c1c;
-  --presentation-brown-soft: rgba(36, 28, 28, 0.78);
-  --presentation-line: rgba(36, 28, 28, 0.12);
-
   --radius-xl: 32px;
   --radius-lg: 22px;
   --radius-md: 16px;
@@ -255,38 +249,14 @@ b {
 .page-intro--presentation {
   display: grid;
   gap: 16px;
-  margin-bottom: 0;
-  padding: 28px 34px 0;
-  border-radius: 30px 30px 0 0;
-  background: var(--presentation-beige);
-}
-
-.page-intro--presentation .page-title {
-  color: var(--presentation-brown);
-}
-
-.page-intro--presentation .page-intro-line {
-  background: linear-gradient(
-    90deg,
-    rgba(36, 28, 28, 0.7) 0%,
-    rgba(36, 28, 28, 0.1) 100%
-  );
+  margin-bottom: 34px;
 }
 
 .presentation-wide {
   display: grid;
   grid-template-columns: minmax(0, 1.75fr) 280px;
-  gap: 36px;
+  gap: 56px;
   align-items: start;
-  padding: 34px;
-  margin-top: -1px;
-  border-radius: 0 0 30px 30px;
-  background: linear-gradient(
-    180deg,
-    var(--presentation-beige) 0%,
-    var(--presentation-beige-soft) 100%
-  );
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
 }
 
 .presentation-main {
@@ -302,8 +272,8 @@ b {
   max-width: none;
   font-size: 1.08rem;
   line-height: 1.95;
-  color: var(--presentation-brown-soft);
-  border-left: 1px solid var(--presentation-line);
+  color: rgba(243, 237, 232, 0.82);
+  border-left: 1px solid rgba(232, 226, 221, 0.08);
   transition:
     color 0.24s ease,
     border-color 0.24s ease,
@@ -320,21 +290,21 @@ b {
   height: calc(100% - 36px);
   background: linear-gradient(
     180deg,
-    rgba(36, 28, 28, 0.9) 0%,
-    rgba(36, 28, 28, 0.32) 100%
+    rgba(154, 138, 135, 0.95) 0%,
+    rgba(93, 79, 77, 0.38) 100%
   );
   transition: width 0.24s ease;
 }
 
 .presentation-row:hover {
-  color: var(--presentation-brown);
-  border-left-color: rgba(36, 28, 28, 0.2);
+  color: rgba(243, 237, 232, 0.98);
+  border-left-color: rgba(232, 226, 221, 0.18);
   transform: translateX(6px);
   background: linear-gradient(
     90deg,
-    rgba(36, 28, 28, 0.045) 0%,
-    rgba(36, 28, 28, 0.015) 38%,
-    rgba(36, 28, 28, 0) 100%
+    rgba(154, 138, 135, 0.08) 0%,
+    rgba(232, 226, 221, 0.015) 38%,
+    rgba(255, 255, 255, 0) 100%
   );
 }
 
@@ -345,7 +315,7 @@ b {
 .presentation-row--lead {
   font-size: clamp(1.18rem, 1.2vw, 1.34rem);
   line-height: 1.9;
-  color: var(--presentation-brown);
+  color: rgba(243, 237, 232, 0.96);
   padding-top: 22px;
   padding-bottom: 22px;
 }
@@ -353,7 +323,7 @@ b {
 .presentation-row--closing {
   margin-top: 10px;
   padding-top: 24px;
-  border-top: 1px solid rgba(36, 28, 28, 0.1);
+  border-top: 1px solid rgba(232, 226, 221, 0.08);
 }
 
 .presentation-row--closing::before {
@@ -370,10 +340,15 @@ b {
 
 .presentation-side-block {
   padding: 20px 20px 22px;
-  border: 1px solid rgba(36, 28, 28, 0.08);
+  border: 1px solid rgba(232, 226, 221, 0.09);
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(8px);
+  background: linear-gradient(
+    180deg,
+    rgba(232, 226, 221, 0.045) 0%,
+    rgba(232, 226, 221, 0.018) 100%
+  );
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-soft);
   transition:
     transform 0.22s ease,
     border-color 0.22s ease,
@@ -382,8 +357,12 @@ b {
 
 .presentation-side-block:hover {
   transform: translateY(-2px);
-  border-color: rgba(36, 28, 28, 0.14);
-  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(232, 226, 221, 0.16);
+  background: linear-gradient(
+    180deg,
+    rgba(154, 138, 135, 0.08) 0%,
+    rgba(232, 226, 221, 0.02) 100%
+  );
 }
 
 .presentation-side-label {
@@ -391,11 +370,11 @@ b {
   font-family: var(--font-serif), serif;
   font-size: 1.35rem;
   line-height: 1;
-  color: var(--presentation-brown);
+  color: var(--ivory);
 }
 
 .presentation-side-block p {
-  color: rgba(36, 28, 28, 0.76);
+  color: rgba(243, 237, 232, 0.78);
 }
 
 .presentation-side-block p + p {
@@ -415,7 +394,7 @@ b {
   padding-left: 18px;
   font-size: 0.96rem;
   line-height: 1.72;
-  color: rgba(36, 28, 28, 0.76);
+  color: rgba(243, 237, 232, 0.78);
 }
 
 .presentation-side-block li::before {
@@ -426,7 +405,7 @@ b {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(36, 28, 28, 0.7);
+  background: var(--taupe-soft);
 }
 
 /* =========================
@@ -724,12 +703,6 @@ b {
 }
 
 @media (max-width: 760px) {
-  .page-intro--presentation,
-  .presentation-wide {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
   .presentation-side {
     grid-template-columns: 1fr;
   }
@@ -777,14 +750,6 @@ b {
   li {
     font-size: 0.98rem;
     line-height: 1.84;
-  }
-
-  .page-intro--presentation {
-    border-radius: 22px 22px 0 0;
-  }
-
-  .presentation-wide {
-    border-radius: 0 0 22px 22px;
   }
 
   .presentation-side-block,
