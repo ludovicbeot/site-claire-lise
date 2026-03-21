@@ -28,6 +28,14 @@ export default function Home() {
             <p className="presentation-row">
               Je souhaite également mettre au centre de mon activité professionnelle mon engagement dans la lutte contre les violences sexistes et sexuelles et toute forme de discrimination, notamment en participant à la mise en place d’actions de sensibilisation et de prévention mais plus généralement en conservant toujours cette grille de lecture dans la gestion de l’ensemble des sujets traités.
             </p>
+
+            <p className="presentation-row">
+              Mon objectif est d’accompagner et sécuriser la fabrication de projets indépendants et exigeants tout en offrant à chaque personne qui participe au processus créatif les meilleures conditions de travail.
+            </p>
+
+            <p className="presentation-row presentation-row--closing">
+              N’hésitez pas à me contacter afin que nous puissions déterminer ensemble les modalités d’intervention correspondant le mieux à votre situation et vos projets.
+            </p>
           </div>
         </div>
 
