@@ -105,6 +105,47 @@ b {
   padding: 34px 0 22px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
+.brand-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  margin-top: 2px;
+}
+
+.brand-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-block {
+  display: grid;
+  gap: 8px;
+}
+
+@media (max-width: 680px) {
+  .brand-area {
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .brand-logo {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+    margin-top: 4px;
+  }
+}
 
 .brand-block {
   display: grid;
