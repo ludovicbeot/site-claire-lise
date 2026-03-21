@@ -1,30 +1,32 @@
 :root {
-  --bg: #2b2424;
-  --bg-deep: #231d1d;
+  --bg: #201b1b;
+  --bg-deep: #171313;
+  --bg-soft: #262020;
 
-  --surface: #e9e2dc;
-  --surface-strong: #f3ede8;
-  --surface-muted: #ddd1ca;
+  --panel: rgba(255, 255, 255, 0.025);
+  --panel-strong: rgba(255, 255, 255, 0.04);
+  --panel-border: rgba(255, 255, 255, 0.09);
+  --panel-border-strong: rgba(255, 255, 255, 0.14);
 
-  --text: #1f1a1a;
-  --text-soft: #6f625f;
-  --text-muted: #9a8f8c;
-  --text-inverse: #f4efe9;
+  --text: #f4eee8;
+  --text-soft: rgba(244, 238, 232, 0.76);
+  --text-muted: rgba(244, 238, 232, 0.48);
 
-  --line: rgba(31, 26, 26, 0.12);
-  --line-strong: rgba(31, 26, 26, 0.2);
-  --line-light: rgba(255, 255, 255, 0.09);
+  --ink-dark: #1b1717;
+  --accent: #c8b2a3;
+  --accent-soft: rgba(200, 178, 163, 0.28);
 
-  --accent: #a08c88;
-  --accent-strong: #887471;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.16);
 
-  --shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
-  --shadow-soft: 0 16px 40px rgba(0, 0, 0, 0.1);
+  --radius-xl: 30px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
 
-  --radius-xl: 34px;
-  --radius-lg: 26px;
-  --radius-md: 18px;
-  --max-width: 1500px;
+  --shadow-soft: 0 16px 40px rgba(0, 0, 0, 0.18);
+  --shadow-deep: 0 32px 80px rgba(0, 0, 0, 0.28);
+
+  --max-width: 1680px;
 }
 
 * {
@@ -45,11 +47,11 @@ html {
 body {
   font-family: "sofia-pro", sans-serif;
   font-weight: 400;
-  color: var(--text-inverse);
+  color: var(--text);
   background:
-    radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.045), transparent 38%),
-    radial-gradient(circle at 82% 88%, rgba(255, 255, 255, 0.03), transparent 34%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+    radial-gradient(circle at 15% 10%, rgba(255, 255, 255, 0.04), transparent 34%),
+    radial-gradient(circle at 85% 85%, rgba(255, 255, 255, 0.025), transparent 30%),
+    linear-gradient(180deg, #2a2323 0%, #1c1717 45%, #141111 100%);
   letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -75,6 +77,11 @@ b {
   font-weight: 700;
 }
 
+.shell {
+  width: min(100% - 56px, var(--max-width));
+  margin: 0 auto;
+}
+
 .site-frame {
   width: 100%;
   max-width: none;
@@ -83,7 +90,6 @@ b {
   border: none;
   border-radius: 0;
   background: transparent;
-  backdrop-filter: none;
   box-shadow: none;
   overflow: visible;
 }
@@ -93,18 +99,17 @@ b {
 .site-header {
   padding: 0;
   background: transparent;
-  backdrop-filter: none;
 }
 
 .site-header-top {
-  width: min(100% - 56px, 1680px);
+  width: min(100% - 56px, var(--max-width));
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 40px;
   align-items: end;
-  padding: 30px 0 22px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 34px 0 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .brand-block {
@@ -114,20 +119,20 @@ b {
 
 .brand {
   font-family: var(--font-serif), serif;
-  font-size: clamp(2.6rem, 4vw, 4.9rem);
+  font-size: clamp(2.9rem, 4.4vw, 5.4rem);
   line-height: 0.88;
   font-weight: 600;
-  letter-spacing: -0.045em;
-  color: var(--text-inverse);
+  letter-spacing: -0.05em;
+  color: var(--text);
 }
 
 .brand-subtitle {
   font-family: "sofia-pro", sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   line-height: 1.4;
   font-weight: 500;
-  color: rgba(244, 239, 233, 0.72);
-  letter-spacing: 0.12em;
+  color: rgba(244, 238, 232, 0.68);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -142,22 +147,21 @@ b {
 .nav-link {
   position: relative;
   font-family: "sofia-pro", sans-serif;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: rgba(244, 239, 233, 0.68);
+  color: rgba(244, 238, 232, 0.62);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding-bottom: 8px;
-  transition: color 0.18s ease;
+  padding-bottom: 10px;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .nav-link:hover {
-  color: var(--text-inverse);
+  color: var(--text);
 }
 
 .nav-link.active {
-  color: var(--text-inverse);
-  font-weight: 600;
+  color: var(--text);
 }
 
 .nav-link.active::after {
@@ -167,13 +171,13 @@ b {
   right: 0;
   bottom: 0;
   height: 1px;
-  background: var(--text-inverse);
+  background: rgba(244, 238, 232, 0.9);
 }
 
 /* PAGE */
 
 .page {
-  padding: 28px 0 48px;
+  padding: 38px 0 56px;
 }
 
 .page-intro {
@@ -181,146 +185,131 @@ b {
   align-items: end;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .page-title {
   margin: 0;
   font-family: var(--font-serif), serif;
-  font-size: clamp(2.2rem, 3vw, 3.3rem);
+  font-size: clamp(2.4rem, 3.2vw, 3.8rem);
   line-height: 0.95;
   font-weight: 500;
-  letter-spacing: -0.045em;
-  color: var(--text-inverse);
+  letter-spacing: -0.048em;
+  color: var(--text);
 }
 
 /* HOME */
 
 .home-layout {
   display: grid;
-  grid-template-columns: minmax(0, 2.8fr) minmax(340px, 0.95fr);
-  gap: 28px;
+  grid-template-columns: minmax(0, 2.5fr) minmax(300px, 0.9fr);
+  gap: 36px;
   align-items: start;
 }
 
 .presentation-block {
   position: relative;
-  overflow: hidden;
   min-height: 560px;
-  background: linear-gradient(
-    180deg,
-    var(--surface-strong) 0%,
-    var(--surface-muted) 100%
-  );
-  border: 1px solid var(--line);
-  border-radius: 26px;
-  box-shadow: var(--shadow-soft);
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .presentation-block::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 14px;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    var(--accent),
-    transparent 78%
-  );
-  opacity: 0.62;
+  inset: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
 }
 
 .presentation-inner {
-  padding: 42px 44px 42px 54px;
+  position: relative;
+  padding: 34px 0 22px;
   column-count: 2;
-  column-gap: 54px;
+  column-gap: 64px;
+}
+
+.presentation-inner::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  bottom: 22px;
+  left: calc(50% - 16px);
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
 }
 
 .presentation-inner p {
   break-inside: avoid;
-  margin: 0 0 1.4em;
-  font-size: 1rem;
+  margin: 0 0 1.45em;
+  font-size: 1.02rem;
   line-height: 1.9;
   font-weight: 400;
-  color: var(--text);
+  color: var(--text-soft);
+  max-width: 40ch;
 }
 
 .presentation-inner p:first-child {
-  font-size: 1.04rem;
+  font-size: 1.08rem;
   line-height: 1.92;
-  font-weight: 500;
   color: var(--text);
 }
 
 .content-side {
   display: grid;
   gap: 22px;
-  align-self: stretch;
+  align-self: start;
+  padding-top: 6px;
 }
 
 .side-card,
 .expertise-card,
 .contact-card,
 .legal-card {
-  background: var(--surface-strong);
-  border: 1px solid var(--line);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.035) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid var(--panel-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
-}
-
-.side-card,
-.expertise-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.side-card:hover,
-.expertise-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.12);
-  border-color: var(--line-strong);
+  box-shadow: none;
+  backdrop-filter: blur(10px);
 }
 
 .side-card {
   position: relative;
   overflow: hidden;
-  padding: 28px 26px 30px;
-  min-height: 100%;
+  padding: 26px 24px 28px;
 }
 
-.side-card--domains {
-  min-height: 350px;
+.side-card:hover,
+.expertise-card:hover {
+  border-color: var(--panel-border-strong);
   background: linear-gradient(
     180deg,
-    var(--surface-strong) 0%,
-    var(--surface) 100%
+    rgba(255, 255, 255, 0.045) 0%,
+    rgba(255, 255, 255, 0.026) 100%
   );
 }
 
+.side-card--domains,
 .side-card--contact {
-  background: var(--surface);
-}
-
-.side-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(
-    90deg,
-    var(--accent),
-    transparent 72%
-  );
-  opacity: 0.72;
+  min-height: auto;
 }
 
 .side-label {
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   font-family: var(--font-serif), serif;
-  font-size: 1.58rem;
+  font-size: 1.5rem;
   line-height: 1;
   font-weight: 500;
   letter-spacing: -0.03em;
@@ -332,23 +321,25 @@ b {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 16px;
+  gap: 14px;
 }
 
 .side-card li {
   position: relative;
-  padding-left: 18px;
+  padding-left: 16px;
   font-size: 0.98rem;
   line-height: 1.72;
-  color: var(--text);
+  color: var(--text-soft);
 }
 
 .side-card li::before {
-  content: "—";
+  content: "";
   position: absolute;
   left: 0;
-  top: 0;
-  color: var(--accent-strong);
+  top: 0.78em;
+  width: 6px;
+  height: 1px;
+  background: rgba(244, 238, 232, 0.6);
 }
 
 .side-card p {
@@ -364,88 +355,80 @@ b {
 .expertise-layout {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  gap: 24px;
   align-items: start;
 }
 
 .expertise-card {
-  background: linear-gradient(
-    180deg,
-    var(--surface-strong) 0%,
-    var(--surface) 100%
-  );
-  border-radius: 28px;
-  padding: 30px 28px 32px;
-  min-height: 100%;
   position: relative;
   overflow: hidden;
+  padding: 28px 26px 30px;
+  min-height: 100%;
 }
 
 .expertise-card::before {
   content: "";
   position: absolute;
-  inset: 0 auto 0 0;
-  width: 8px;
+  top: 0;
+  left: 26px;
+  right: 26px;
+  height: 1px;
   background: linear-gradient(
-    180deg,
-    var(--accent),
-    transparent 82%
+    90deg,
+    rgba(200, 178, 163, 0.85) 0%,
+    rgba(200, 178, 163, 0.18) 55%,
+    transparent 100%
   );
-  opacity: 0.68;
 }
 
 .expertise-card h2,
 .legal-card h2 {
-  margin: 0 0 20px;
-  padding-left: 4px;
+  margin: 0 0 18px;
   font-family: var(--font-serif), serif;
   font-size: 1.68rem;
-  line-height: 1.05;
+  line-height: 1.06;
   font-weight: 500;
   letter-spacing: -0.04em;
-  max-width: 90%;
+  max-width: 92%;
   color: var(--text);
 }
 
 .expertise-card ul {
   list-style: none;
   margin: 0;
-  padding: 0 0 0 4px;
+  padding: 0;
   display: grid;
   gap: 14px;
 }
 
 .expertise-card li {
   position: relative;
-  padding-left: 18px;
+  padding-left: 16px;
   font-size: 0.98rem;
-  line-height: 1.75;
-  color: var(--text);
+  line-height: 1.74;
+  color: var(--text-soft);
 }
 
 .expertise-card li::before {
-  content: "—";
+  content: "";
   position: absolute;
   left: 0;
-  top: 0;
-  color: var(--accent-strong);
+  top: 0.78em;
+  width: 6px;
+  height: 1px;
+  background: rgba(244, 238, 232, 0.6);
 }
 
 /* CONTACT */
 
 .contact-card {
-  padding: 6px 28px;
+  padding: 4px 28px;
   max-width: 980px;
-  background: linear-gradient(
-    180deg,
-    var(--surface-strong) 0%,
-    var(--surface) 100%
-  );
 }
 
 .contact-row {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 180px 1fr;
   gap: 18px;
   align-items: start;
   padding: 22px 0;
@@ -458,20 +441,20 @@ b {
 
 .contact-label {
   font-family: "sofia-pro", sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--text-soft);
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.14em;
 }
 
 .contact-card p,
 .contact-card a {
-  color: var(--text);
+  color: var(--text-soft);
 }
 
 .contact-card a:hover {
-  color: var(--accent-strong);
+  color: var(--text);
 }
 
 /* MENTIONS LEGALES */
@@ -486,11 +469,6 @@ b {
   padding: 28px 24px;
   display: grid;
   gap: 10px;
-  background: linear-gradient(
-    180deg,
-    var(--surface-strong) 0%,
-    var(--surface) 100%
-  );
 }
 
 .legal-card p,
@@ -501,7 +479,7 @@ b {
 /* FOOTER */
 
 .site-footer {
-  padding: 0 30px 22px;
+  padding: 0 0 24px;
 }
 
 .footer-inner {
@@ -509,15 +487,15 @@ b {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  border-top: 1px solid var(--line-light);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
   padding-top: 18px;
-  color: rgba(244, 239, 233, 0.62);
+  color: rgba(244, 238, 232, 0.56);
 }
 
 .footer-inner p,
 .footer-inner a {
   font-family: "sofia-pro", sans-serif;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   line-height: 1.5;
 }
 
@@ -527,7 +505,7 @@ b {
 }
 
 .footer-inner a:hover {
-  color: var(--text-inverse);
+  color: var(--text);
 }
 
 /* RESPONSIVE */
@@ -535,14 +513,11 @@ b {
 @media (max-width: 1220px) {
   .home-layout {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .content-side {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .presentation-block {
-    min-height: auto;
   }
 
   .expertise-layout,
@@ -564,7 +539,15 @@ b {
 
   .presentation-inner {
     column-count: 1;
-    padding: 30px 28px 32px 38px;
+    padding: 26px 0 14px;
+  }
+
+  .presentation-inner::before {
+    display: none;
+  }
+
+  .presentation-inner p {
+    max-width: none;
   }
 
   .content-side {
@@ -573,62 +556,50 @@ b {
 }
 
 @media (max-width: 680px) {
-  .site-frame {
-    width: min(calc(100% - 14px), var(--max-width));
-    margin: 7px auto;
-    border-radius: 22px;
-  }
-
-  .site-header,
-  .page,
-  .site-footer {
-    padding-left: 18px;
-    padding-right: 18px;
+  .shell,
+  .site-header-top {
+    width: min(100% - 24px, var(--max-width));
   }
 
   .brand {
-    font-size: 2.3rem;
+    font-size: 2.35rem;
   }
 
   .brand-subtitle {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
   }
 
   .nav-link {
-    font-size: 0.83rem;
+    font-size: 0.82rem;
+  }
+
+  .page {
+    padding: 26px 0 42px;
   }
 
   .page-title {
     font-size: 2rem;
   }
 
-  .presentation-block,
   .side-card,
   .expertise-card,
   .legal-card {
-    border-radius: 20px;
+    border-radius: 18px;
   }
 
   .presentation-inner {
-    padding: 22px 18px 24px 28px;
-    column-gap: 0;
+    padding: 22px 0 8px;
   }
 
-  .presentation-block::before {
-    width: 10px;
-  }
-
-  .presentation-inner p {
+  .presentation-inner p,
+  p,
+  li {
     font-size: 0.98rem;
-    line-height: 1.82;
-  }
-
-  .presentation-inner p:first-child {
-    font-size: 1rem;
+    line-height: 1.8;
   }
 
   .contact-card {
-    padding: 6px 18px;
+    padding: 4px 18px;
   }
 
   .contact-row {
@@ -644,26 +615,9 @@ b {
     padding-right: 18px;
   }
 
-  .expertise-card {
-    padding-top: 22px;
-    padding-bottom: 24px;
-  }
-
   .expertise-card h2,
   .legal-card h2 {
     font-size: 1.42rem;
     max-width: 100%;
-  }
-
-  .expertise-card li,
-  .side-card li {
-    font-size: 0.96rem;
-    line-height: 1.7;
-  }
-
-  p,
-  li {
-    font-size: 0.98rem;
-    line-height: 1.8;
   }
 }
