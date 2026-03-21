@@ -292,8 +292,7 @@ b {
   gap: 14px;
 }
 
-.side-card li,
-.expertise-card li {
+.side-card li {
   position: relative;
   padding-left: 20px;
   font-size: 0.97rem;
@@ -301,8 +300,7 @@ b {
   color: var(--text-soft);
 }
 
-.side-card li::before,
-.expertise-card li::before {
+.side-card li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -319,17 +317,21 @@ b {
   opacity: 0.95;
 }
 
-/* EXPERTISE / CONTACT / LEGAL */
+/* EXPERTISE */
+
+.expertise-main {
+  margin-bottom: 40px;
+}
 
 .expertise-layout {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
   align-items: start;
 }
 
 .expertise-card {
-  padding: 28px 24px 30px;
+  padding: 26px 22px 26px;
   border: 1px solid var(--panel-border);
   border-radius: var(--radius-lg);
   background: linear-gradient(
@@ -341,44 +343,60 @@ b {
   min-height: 100%;
 }
 
+.expertise-card--main {
+  padding: 36px 32px 34px;
+  border: 1px solid var(--panel-border-strong);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.025) 100%
+  );
+  backdrop-filter: blur(14px);
+}
+
 .expertise-card-top {
   display: grid;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-.expertise-card h2 {
+.expertise-card h2,
+.legal-card h2 {
   margin: 0;
   font-family: var(--font-serif), serif;
-  font-size: 1.62rem;
-  line-height: 1.04;
+  font-size: 1.4rem;
+  line-height: 1.08;
   font-weight: 500;
   letter-spacing: -0.04em;
   color: var(--text);
-  max-width: 92%;
+}
+
+.expertise-card--main h2 {
+  font-size: 2rem;
+  line-height: 1.02;
 }
 
 .expertise-lead {
-  max-width: 56ch;
-  font-size: 1rem;
-  line-height: 1.82;
+  font-size: 0.98rem;
+  line-height: 1.75;
   color: var(--text);
+  max-width: 60ch;
 }
 
 .expertise-list {
   list-style: none;
   margin: 0;
-  padding: 18px 0 0;
+  padding: 16px 0 0;
   display: grid;
-  gap: 14px;
+  gap: 12px;
   border-top: 1px solid var(--line);
 }
 
 .expertise-card li {
   position: relative;
-  padding-left: 20px;
-  font-size: 0.97rem;
-  line-height: 1.74;
+  padding-left: 18px;
+  font-size: 0.95rem;
+  line-height: 1.7;
   color: var(--text-soft);
 }
 
@@ -386,9 +404,9 @@ b {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.68em;
-  width: 8px;
-  height: 8px;
+  top: 0.7em;
+  width: 7px;
+  height: 7px;
   border-radius: 2px;
   transform: rotate(45deg);
   background: linear-gradient(
@@ -399,42 +417,19 @@ b {
   opacity: 0.95;
 }
 
-@media (max-width: 1200px) {
-  .expertise-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 680px) {
-  .expertise-card {
-    padding: 20px 18px 22px;
-    border-radius: 16px;
-  }
-
-  .expertise-card h2 {
-    font-size: 1.42rem;
-    max-width: 100%;
-  }
-
-  .expertise-lead,
-  .expertise-card li {
-    font-size: 0.98rem;
-    line-height: 1.8;
-  }
-
-  .expertise-card li {
-    padding-left: 18px;
-  }
-
-  .expertise-card li::before {
-    width: 7px;
-    height: 7px;
-    top: 0.72em;
-  }
-}
+/* CONTACT */
 
 .contact-card {
   max-width: 900px;
+  padding: 26px 24px 28px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(12px);
 }
 
 .contact-row {
@@ -459,7 +454,30 @@ b {
 }
 
 .contact-card p,
-.contact-card a,
+.contact-card a {
+  color: var(--text-soft);
+}
+
+/* LEGAL */
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.legal-card {
+  padding: 26px 24px 28px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(12px);
+}
+
 .legal-card p,
 .legal-card li {
   color: var(--text-soft);
@@ -514,7 +532,8 @@ b {
     gap: 28px 46px;
   }
 
-  .expertise-layout {
+  .expertise-layout,
+  .legal-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -562,6 +581,13 @@ b {
     font-size: 2rem;
   }
 
+  .presentation-inner p,
+  p,
+  li {
+    font-size: 0.98rem;
+    line-height: 1.82;
+  }
+
   .side-card,
   .expertise-card,
   .contact-card,
@@ -570,16 +596,27 @@ b {
     border-radius: 16px;
   }
 
-  .contact-row {
-    grid-template-columns: 1fr;
-    gap: 6px;
+  .expertise-main {
+    margin-bottom: 28px;
   }
 
-  p,
-  li,
-  .presentation-inner p {
+  .expertise-card--main {
+    padding: 24px 20px;
+  }
+
+  .expertise-card--main h2 {
+    font-size: 1.6rem;
+  }
+
+  .expertise-card h2,
+  .legal-card h2 {
+    font-size: 1.32rem;
+  }
+
+  .expertise-lead,
+  .expertise-card li {
     font-size: 0.98rem;
-    line-height: 1.82;
+    line-height: 1.8;
   }
 
   .side-card li,
@@ -592,5 +629,10 @@ b {
     width: 7px;
     height: 7px;
     top: 0.72em;
+  }
+
+  .contact-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }

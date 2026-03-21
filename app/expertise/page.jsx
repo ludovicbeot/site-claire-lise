@@ -30,7 +30,8 @@ const sections = [
     ],
   },
   {
-    title: "Lutte contre les violences sexistes et sexuelles et toute forme de discrimination",
+    title:
+      "Lutte contre les violences sexistes et sexuelles et toute forme de discrimination",
     items: [
       "Audit interne et accompagnement dans la mise en place de bonnes pratiques au sein des sociétés de production dès l’écriture et jusqu’à l’issue de la post-production par le biais de :",
       "l’établissement du DUERP ;",
@@ -42,14 +43,31 @@ const sections = [
 ];
 
 export default function ExpertisePage() {
+  const [mainSection, ...secondarySections] = sections;
+
   return (
     <main className="page">
       <section className="page-intro">
         <h1 className="page-title">Expertise</h1>
       </section>
 
+      <section className="expertise-main">
+        <article className="expertise-card expertise-card--main">
+          <div className="expertise-card-top">
+            <h2>{mainSection.title}</h2>
+            <p className="expertise-lead">{mainSection.items[0]}</p>
+          </div>
+
+          <ul className="expertise-list">
+            {mainSection.items.slice(1).map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </article>
+      </section>
+
       <section className="expertise-layout">
-        {sections.map((section) => {
+        {secondarySections.map((section) => {
           const [lead, ...details] = section.items;
 
           return (
@@ -59,13 +77,11 @@ export default function ExpertisePage() {
                 <p className="expertise-lead">{lead}</p>
               </div>
 
-              {details.length > 0 && (
-                <ul className="expertise-list">
-                  {details.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              )}
+              <ul className="expertise-list">
+                {details.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
             </article>
           );
         })}
