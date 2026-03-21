@@ -1,18 +1,12 @@
 import "./globals.css";
 import Link from "next/link";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Cormorant_Garamond } from "next/font/google";
 import Header from "../components/Header";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-serif",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-sans",
 });
 
 export const metadata = {
@@ -22,18 +16,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="fr" className={cormorant.variable}>
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/jkf6bti.css" />
+      </head>
       <body>
-        <Header />
-
-        {children}
-
-        <footer className="site-footer">
-          <div className="footer-inner">
-            <p>Claire-Lise Gaudelet — Avocate au Barreau de Paris</p>
-            <Link href="/mentions-legales">mentions légales</Link>
-          </div>
-        </footer>
+        <div className="site-frame">
+          <Header />
+          {children}
+          <footer className="site-footer">
+            <div className="footer-inner">
+              <p>Claire-Lise Gaudelet — Avocate au Barreau de Paris</p>
+              <Link href="/mentions-legales">mentions légales</Link>
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   );

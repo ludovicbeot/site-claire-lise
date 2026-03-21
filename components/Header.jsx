@@ -15,7 +15,9 @@ export default function Header() {
           <Link href="/" className="brand">
             Claire-Lise Gaudelet
           </Link>
-          <p className="brand-subtitle">Avocate au Barreau de Paris</p>
+          <p className="brand-subtitle">
+            Avocate au Barreau de Paris
+          </p>
         </div>
 
         <nav className="main-nav" aria-label="Navigation principale">
