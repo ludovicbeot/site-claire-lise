@@ -69,6 +69,13 @@ export default function Home() {
         </article>
 
         <aside className="content-side">
+          <div className="side-card side-card--contact">
+            <p className="side-label">Contact</p>
+            <p>06 71 17 84 05</p>
+            <p>clairelise@clg-avocate.com</p>
+            <p>5 rue d’Aboukir – 75002 Paris</p>
+          </div>
+
           <div className="side-card side-card--domains">
             <p className="side-label">Domaines</p>
             <ul>
@@ -77,13 +84,6 @@ export default function Home() {
               <li>Droit de la presse</li>
               <li>VHSS et discriminations</li>
             </ul>
-          </div>
-
-          <div className="side-card side-card--contact">
-            <p className="side-label">Contact</p>
-            <p>06 71 17 84 05</p>
-            <p>clairelise@clg-avocate.com</p>
-            <p>5 rue d’Aboukir – 75002 Paris</p>
           </div>
         </aside>
       </section>
