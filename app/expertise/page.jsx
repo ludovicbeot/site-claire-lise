@@ -49,16 +49,26 @@ export default function ExpertisePage() {
       </section>
 
       <section className="expertise-layout">
-        {sections.map((section) => (
-          <article className="expertise-card" key={section.title}>
-            <h2>{section.title}</h2>
-            <ul>
-              {section.items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </article>
-        ))}
+        {sections.map((section) => {
+          const [lead, ...details] = section.items;
+
+          return (
+            <article className="expertise-card" key={section.title}>
+              <div className="expertise-card-top">
+                <h2>{section.title}</h2>
+                <p className="expertise-lead">{lead}</p>
+              </div>
+
+              {details.length > 0 && (
+                <ul className="expertise-list">
+                  {details.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              )}
+            </article>
+          );
+        })}
       </section>
     </main>
   );
