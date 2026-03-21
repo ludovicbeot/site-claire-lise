@@ -60,7 +60,7 @@ export default function Home() {
               travail.
             </p>
 
-            <p>
+            <p className="presentation-closing">
               N’hésitez pas à me contacter afin que nous puissions déterminer
               ensemble les modalités d’intervention correspondant le mieux à votre
               situation et vos projets.
