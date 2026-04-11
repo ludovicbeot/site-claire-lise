@@ -79,7 +79,6 @@ export default function Header() {
             </Link>
 
             <div className="brand-block">
-              <p className="brand-subtitle">Avocate au Barreau de Paris</p>
             </div>
           </div>
 
