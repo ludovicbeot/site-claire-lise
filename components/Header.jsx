@@ -2,15 +2,61 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function Header() {
-  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState("presentation");
 
-  const isActive = (href) => pathname === href;
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["presentation", "expertise", "contact"];
+      const scrollPosition = window.scrollY + 100; // offset for header
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // initial check
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const getSectionTitle = (section) => {
+    switch (section) {
+      case "presentation":
+        return "Présentation";
+      case "expertise":
+        return "Expertises";
+      case "contact":
+        return "Contact";
+      default:
+        return "Présentation";
+    }
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <header className="site-header">
+    <>
+      <div
+        className="custom-cursor"
+        style={{
+          left: `${mousePosition.x}px`,
+          top: `${mousePosition.y}px`,
+        }}
+      />
+      <header className="site-header">
       <div className="site-header-top">
         <div className="brand-area">
           <Link href="/" className="brand-logo" aria-label="Retour à l’accueil">
@@ -32,25 +78,35 @@ export default function Header() {
         </div>
 
         <nav className="main-nav" aria-label="Navigation principale">
-          <Link href="/" className={isActive("/") ? "nav-link active" : "nav-link"}>
-            présentation
-          </Link>
-
-          <Link
-            href="/expertise"
-            className={isActive("/expertise") ? "nav-link active" : "nav-link"}
+          <button
+            onClick={() => scrollToSection("presentation")}
+            className={`nav-link ${activeSection === "presentation" ? "active" : ""}`}
           >
-            expertise
-          </Link>
+            présentation
+          </button>
 
-          <Link
-            href="/contact"
-            className={isActive("/contact") ? "nav-link active" : "nav-link"}
+          <button
+            onClick={() => scrollToSection("expertise")}
+            className={`nav-link ${activeSection === "expertise" ? "active" : ""}`}
+          >
+            expertises
+          </button>
+
+          <button
+            onClick={() => scrollToSection("contact")}
+            className={`nav-link ${activeSection === "contact" ? "active" : ""}`}
           >
             contact
-          </Link>
+          </button>
         </nav>
       </div>
+
+      <div className="current-section">
+        <h1 className={`section-title ${activeSection === activeSection ? "active" : ""}`}>
+          {getSectionTitle(activeSection)}
+        </h1>
+      </div>
     </header>
+    </>
   );
 }
