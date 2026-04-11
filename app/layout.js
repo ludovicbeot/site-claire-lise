@@ -1,22 +1,22 @@
 import "./globals.css";
 import Link from "next/link";
 import Header from "../components/Header";
+import { Darker_Grotesque } from "next/font/google";
+
+const darkerGrotesque = Darker_Grotesque({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-darker-grotesque",
+});
 
 export const metadata = {
   title: "Claire-Lise Gaudelet",
   description: "Avocate au Barreau de Paris",
-  other: {
-    link: [
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
-      { href: 'https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700;800;900&display=swap', rel: 'stylesheet' },
-    ],
-  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={darkerGrotesque.className}>
       <body>
         <Header />
         <main className="shell">{children}</main>
