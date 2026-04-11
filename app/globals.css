@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700;800;900&display=swap');
+
 :root {
   --bg: #3A2F2D;
   --bg-soft: #3A2F2D;
@@ -95,7 +97,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-darker-grotesque), sans-serif;
+  font-family: 'Darker Grotesque', sans-serif;
 }
 
 .site-frame {

@@ -1,13 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
 import Header from "../components/Header";
-import { Darker_Grotesque } from "next/font/google";
-
-const darkerGrotesque = Darker_Grotesque({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-darker-grotesque",
-});
 
 export const metadata = {
   title: "Claire-Lise Gaudelet",
@@ -16,7 +9,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className={darkerGrotesque.className}>
+    <html lang="fr">
       <body>
         <Header />
         <main className="shell">{children}</main>
