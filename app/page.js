@@ -36,7 +36,7 @@ export default function Home() {
 
         <div className="expertise-accordion reveal-soft">
           {expertises.map((expertise, index) => (
-            <Accordion key={index} title={expertise.title}>
+            <Accordion key={index} title={expertise.title} isOpenByDefault={index === 0}>
               <div className="expertise-content">
                 {expertise.entries.map((entry, entryIndex) => (
                   <div className="expertise-entry" key={entryIndex}>

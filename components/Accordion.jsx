@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-export default function Accordion({ title, children }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Accordion({ title, children, isOpenByDefault = false }) {
+  const [isOpen, setIsOpen] = useState(isOpenByDefault);
 
   return (
     <div className="accordion-item">
