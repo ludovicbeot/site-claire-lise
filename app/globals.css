@@ -275,7 +275,7 @@ body {
 
 .page-title {
   margin: 0;
-  font-family: 'Darker Grotesque';
+  font-family: 'Darker Grotesque', sans-serif;
   font-size: clamp(2.2rem, 3.2vw, 3.6rem);
   line-height: 0.98;
   font-weight: 700;
