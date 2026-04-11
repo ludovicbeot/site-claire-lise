@@ -1,4 +1,4 @@
-export default function Home() {
+import Accordion from "../components/Accordion";
   return (
     <main className="page">
       <section id="presentation" className="section presentation-section">
@@ -14,15 +14,7 @@ export default function Home() {
                 <h2 className="presentation-subtitle">Parcours</h2>
 
                 <p className="presentation-row">
-                  Avocate au Barreau de Paris depuis 2019, j’ai exercé durant près de cinq années au sein de différents cabinets d’affaires parisiens. J’ai ensuite intégré le service juridique d’une agence artistique de premier plan. Durant deux ans, j’ai accompagné et conseillé quotidiennement des auteur·ice·s (scénaristes, réalisateur·ice·s) et artistes-interprètes dans la rédaction et la négociation des contrats relatifs à la création d’œuvres cinématographiques et audiovisuelles (courts métrages, longs métrages, documentaires, unitaires télé, séries).
-                </p>
-
-                <p className="presentation-row">
-                  La variété de mes expériences professionnelles m’a permis de développer, outre une réelle agilité et une grande capacité d’adaptation, des compétences approfondies en droit de la propriété intellectuelle – avec une expertise particulière en droit d’auteur dans le secteur du cinéma et de l’audiovisuel – et en droit de la presse, tant en conseil qu’en précontentieux et contentieux.
-                </p>
-
-                <p className="presentation-row">
-                  Forte d’une riche activité contentieuse, je suis en mesure de vous accompagner pleinement dans la gestion de tout litige, de la tentative de conciliation à la saisine et la représentation en justice devant les juridictions civiles, commerciales et pénales.
+                  Avocate au Barreau de Paris depuis 2019, j'ai exercé au sein de différents cabinets d'affaires parisiens et service juridique d'une agence artistique de premier plan spécialisée dans la représentation d'auteur·ice·s (scénaristes et réalisateur·ice·s) et d'artistes-interprètes. La variété de mes expériences professionnelles m'a permis de développer, outre une réelle agilité et une grande capacité d'adaptation, des compétences approfondies en droit de la propriété intellectuelle — avec une expertise particulière en droit d'auteur dans le secteur du cinéma et de l'audiovisuel — et en droit de la presse, tant en conseil qu'en précontentieux et contentieux.
                 </p>
               </section>
 
@@ -30,15 +22,7 @@ export default function Home() {
                 <h2 className="presentation-subtitle">Approche et valeurs</h2>
 
                 <p className="presentation-row">
-                  Mon intérêt pour la création artistique et notamment cinématographique m’a par ailleurs permis de développer une connaissance approfondie de ce secteur, au-delà des enjeux juridiques qui lui sont propre, me permettant d’avoir une approche globale et inventive de chaque projet.
-                </p>
-
-                <p className="presentation-row">
-                  Je souhaite également mettre au centre de mon activité professionnelle mon engagement dans la lutte contre les violences sexistes et sexuelles et toute forme de discrimination, notamment en participant à la mise en place d’actions de sensibilisation et de prévention mais plus généralement en conservant toujours cette grille de lecture dans la gestion de l’ensemble des sujets traités.
-                </p>
-
-                <p className="presentation-row">
-                  Mon objectif est d’accompagner et sécuriser la fabrication de projets indépendants et exigeants tout en offrant à chaque personne qui participe au processus créatif les meilleures conditions de travail.
+                  Mon intérêt pour la création artistique et notamment cinématographique m'a permis de développer une connaissance approfondie de ce secteur au-delà des enjeux juridiques qui lui sont propres, me permettant d'avoir une approche globale et inventive de chaque projet. Je souhaite également mettre au centre de mon activité mon engagement dans la lutte contre les violences sexistes et sexuelles et toute forme de discrimination [...] Mon objectif est d'accompagner et sécuriser la fabrication de projets indépendants et exigeants tout en offrant à chaque personne qui participe au processus créatif les meilleures conditions de travail.
                 </p>
               </section>
 
@@ -74,18 +58,13 @@ export default function Home() {
           <h1 className="page-title">Expertises</h1>
         </div>
 
-        <div className="expertise-grid-2x2 reveal-soft">
-          {sections.map((section) => (
-            <article className="expertise-card expertise-card--equal" key={section.title}>
-              <div className="expertise-card-top">
-                <h2>{section.title}</h2>
-              </div>
-
-              <div className="expertise-entries">
-                {section.entries.map((entry, index) => (
-                  <div className="expertise-entry" key={index}>
+        <div className="expertise-accordion reveal-soft">
+          {expertises.map((expertise, index) => (
+            <Accordion key={index} title={expertise.title}>
+              <div className="expertise-content">
+                {expertise.entries.map((entry, entryIndex) => (
+                  <div className="expertise-entry" key={entryIndex}>
                     <p className="expertise-dash">{entry.dash}</p>
-
                     {entry.bullets && (
                       <ul className="expertise-sublist">
                         {entry.bullets.map((bullet, bulletIndex) => (
@@ -96,7 +75,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-            </article>
+            </Accordion>
           ))}
         </div>
       </section>
@@ -107,26 +86,13 @@ export default function Home() {
         </div>
 
         <div className="contact-card">
-          <div className="contact-row">
-            <span className="contact-label">tél.</span>
-            <a href="tel:+33671178405">06 71 17 84 05</a>
-          </div>
-
-          <div className="contact-row">
-            <span className="contact-label">email</span>
-            <a href="mailto:clairelise@clg-avocate.com">
-              clairelise@clg-avocate.com
-            </a>
-          </div>
-
-          <div className="contact-row">
-            <span className="contact-label">adresse postale</span>
-            <p>5 rue d’Aboukir – 75002 Paris</p>
-          </div>
-
-          <div className="contact-row">
-            <span className="contact-label">toque</span>
-            <p>xx</p>
+          <div className="contact-info">
+            <h2>Claire-Lise Gaudelet — Avocate au barreau de Paris</h2>
+            <div className="contact-details">
+              <p><strong>tél.</strong> : 06 71 17 84 05</p>
+              <p><strong>email</strong> : clairelise@clg-avocate.com</p>
+              <p><strong>adresse</strong> : 5 rue d'Aboukir — 75002 Paris</p>
+            </div>
           </div>
         </div>
       </section>
@@ -134,7 +100,7 @@ export default function Home() {
   );
 }
 
-const sections = [
+const expertises = [
   {
     title: "Droit du cinéma et de l’audiovisuel",
     entries: [

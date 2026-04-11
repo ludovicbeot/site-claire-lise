@@ -5,21 +5,30 @@ export default function MentionsLegales() {
         <h1 className="page-title">Mentions légales</h1>
       </section>
 
-      <section className="legal-grid">
-        <article className="legal-card">
-          <h2>directrice de la publication</h2>
-          <p>claire-lise gaudelet</p>
-          <p>tél. : 06 71 17 84 05</p>
-          <p>email : clairelise@clg-avocate.com</p>
-          <p>adresse postale : 5 rue d’Aboukir – 75002 Paris</p>
-          <p>toque xx</p>
-          <p>siret xxx</p>
-        </article>
+      <section className="legal-content">
+        <div className="legal-section">
+          <h2>Directrice de la publication</h2>
+          <p>Claire-Lise Gaudelet</p>
+          <p>Avocate au Barreau de Paris</p>
+        </div>
 
-        <article className="legal-card">
-          <h2>hébergeur</h2>
-          <p>le nom de l’hébergeur, la raison sociale, l’adresse, le numéro de téléphone.</p>
-        </article>
+        <div className="legal-section">
+          <h2>Coordonnées</h2>
+          <p>Téléphone : 06 71 17 84 05</p>
+          <p>Email : clairelise@clg-avocate.com</p>
+          <p>Adresse : 5 rue d'Aboukir — 75002 Paris</p>
+        </div>
+
+        <div className="legal-section">
+          <h2>Informations légales</h2>
+          <p>SIRET : [À compléter]</p>
+          <p>TVA intracommunautaire : [À compléter]</p>
+        </div>
+
+        <div className="legal-section">
+          <h2>Hébergeur</h2>
+          <p>[À compléter]</p>
+        </div>
       </section>
     </main>
   );
