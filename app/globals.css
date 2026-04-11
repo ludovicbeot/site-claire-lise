@@ -1,40 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --bg: #3A2F2D;
-  --bg-soft: #3A2F2D;
-  --bg-deep: #3A2F2D;
+  --bg: #f5f1ee;
+  --bg-soft: #faf8f5;
+  --bg-deep: #ebe7e3;
 
-  --ivory: #e7dfd8;
-  --ivory-soft: #ddd3cc;
-  --taupe: #b9aaa1;
-  --taupe-soft: #c9bcb4;
-  --moka: #5a4c49;
-  --moka-deep: #241d1c;
-  --plum: #221c1b;
+  --ivory: #3A2F2D;
+  --ivory-soft: #4a4541;
+  --taupe: #6b6159;
+  --taupe-soft: #5b5349;
+  --moka: #3A2F2D;
+  --moka-deep: #2a251f;
+  --plum: #1a1511;
 
-  --text: #e7dfd8;
-  --text-soft: rgba(231, 223, 216, 0.84);
-  --text-muted: rgba(231, 223, 216, 0.6);
+  --text: #000000;
+  --text-soft: rgba(0, 0, 0, 0.84);
+  --text-muted: rgba(0, 0, 0, 0.6);
 
-  --panel: rgba(231, 223, 216, 0.045);
-  --panel-strong: rgba(231, 223, 216, 0.075);
-  --panel-border: rgba(231, 223, 216, 0.14);
-  --panel-border-strong: rgba(231, 223, 216, 0.2);
+  --panel: rgba(0, 0, 0, 0.045);
+  --panel-strong: rgba(0, 0, 0, 0.075);
+  --panel-border: rgba(0, 0, 0, 0.14);
+  --panel-border-strong: rgba(0, 0, 0, 0.2);
 
-  --accent: #e7dfd8;
-  --accent-soft: rgba(231, 223, 216, 0.14);
-  --accent-strong: rgba(231, 223, 216, 0.8);
+  --accent: #000000;
+  --accent-soft: rgba(0, 0, 0, 0.14);
+  --accent-strong: rgba(0, 0, 0, 0.8);
 
-  --line: rgba(231, 223, 216, 0.12);
-  --line-strong: rgba(231, 223, 216, 0.18);
+  --line: rgba(0, 0, 0, 0.12);
+  --line-strong: rgba(0, 0, 0, 0.18);
 
   --radius-xl: 32px;
   --radius-lg: 22px;
   --radius-md: 16px;
 
-  --shadow-soft: 0 18px 60px rgba(0, 0, 0, 0.22);
-  --shadow-deep: 0 30px 100px rgba(0, 0, 0, 0.28);
+  --shadow-soft: 0 18px 60px rgba(0, 0, 0, 0.08);
+  --shadow-deep: 0 30px 100px rgba(0, 0, 0, 0.12);
 
   --max-width: 1680px;
 }
@@ -59,8 +59,8 @@ body {
   font-weight: 400;
   color: var(--text);
   background:
-    radial-gradient(circle at 14% 10%, rgba(255, 255, 255, 0.035), transparent 28%),
-    radial-gradient(circle at 84% 78%, rgba(255, 255, 255, 0.02), transparent 24%),
+    radial-gradient(circle at 14% 10%, rgba(58, 47, 45, 0.02), transparent 28%),
+    radial-gradient(circle at 84% 78%, rgba(58, 47, 45, 0.015), transparent 24%),
     linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 56%, var(--bg-deep) 100%);
   letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
