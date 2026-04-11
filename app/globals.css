@@ -242,8 +242,8 @@ h6 {
   transform: translate(-50%, -50%);
   background-image: url('/images/logo-clg.png');
   background-repeat: no-repeat;
-  background-size: auto 540px;
-  background-position: 0 center;
+  background-size: auto 220px;
+  background-position: -150px center;
   pointer-events: none;
   z-index: 9999;
   transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease;
