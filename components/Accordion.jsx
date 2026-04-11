@@ -6,7 +6,7 @@ export default function Accordion({ title, children, isOpenByDefault = false }) 
   const [isOpen, setIsOpen] = useState(isOpenByDefault);
 
   return (
-    <div className="accordion-item">
+    <div className={`accordion-item ${isOpen ? 'open' : ''}`}>
       <button
         className="accordion-header"
         onClick={() => setIsOpen(!isOpen)}
