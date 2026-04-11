@@ -235,17 +235,18 @@ h6 {
 
 .custom-cursor {
   position: fixed;
-  width: 8px;
-  height: 8px;
+  width: 28px;
+  height: 28px;
   top: 0;
   left: 0;
   transform: translate(-50%, -50%);
-  background-color: var(--text);
-  border: 1px solid rgba(255, 255, 255, 0.92);
-  border-radius: 50%;
+  background-image: url('/images/logo-clg.png');
+  background-repeat: no-repeat;
+  background-size: auto 24px;
+  background-position: 6px center;
   pointer-events: none;
   z-index: 9999;
-  transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease;
 }
 
 body {
