@@ -225,29 +225,6 @@ h6 {
   background: var(--ivory-soft);
 }
 
-.current-section {
-  width: min(100% - 56px, var(--max-width));
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-.section-title {
-  font-family: 'Darker Grotesque', Arial, Helvetica, sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--ivory);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  transition: all 0.3s ease;
-}
-
-.section-title.active {
-  font-weight: 900;
-  text-decoration: underline;
-  text-decoration-color: var(--ivory-soft);
-  text-decoration-thickness: 2px;
-}
-
 .custom-cursor {
   position: fixed;
   width: 8px;

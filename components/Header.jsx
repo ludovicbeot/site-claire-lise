@@ -106,12 +106,6 @@ export default function Header() {
             </button>
           </nav>
         </div>
-
-        <div className="current-section">
-          <h1 className={`section-title ${activeSection === activeSection ? "active" : ""}`}>
-            {getSectionTitle(activeSection)}
-          </h1>
-        </div>
       </header>
     </>
   );
