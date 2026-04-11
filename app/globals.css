@@ -148,9 +148,9 @@ h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 600px;
-  height: 600px;
-  flex: 0 0 600px;
+  width: 160px;
+  height: 160px;
+  flex: 0 0 160px;
   margin-top: 2px;
 }
 
