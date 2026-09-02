@@ -406,15 +406,15 @@ body {
 }
 
 .presentation-section {
-  margin-left: clamp(80px, 12vw, 180px);
+  margin-left: clamp(140px, 15vw, 280px);
 }
 
 .presentation-section--shifted {
-  margin-left: clamp(350px, 45vw, 650px);
+  margin-left: clamp(500px, 55vw, 850px);
 }
 
 .presentation-section--shifted .presentation-row {
-  max-width: 610px;
+  max-width: 620px;
 }
 
 .presentation-subtitle {
@@ -434,10 +434,10 @@ body {
   padding: 0;
   max-width: 610px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 18px;
+  line-height: 1.7;
   color: var(--text-soft);
-  text-align: left;
+  text-align: justify;
   border-left: none;
   transition: color 0.2s ease;
 }
@@ -486,10 +486,12 @@ body {
 
   .presentation-section--shifted .presentation-row {
     max-width: 100%;
+    text-align: left;
   }
 
   .presentation-row {
     max-width: 100%;
+    text-align: left;
   }
 }
 
