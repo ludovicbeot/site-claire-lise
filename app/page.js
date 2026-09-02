@@ -14,7 +14,7 @@ export default function Home() {
 
           <div className="presentation-intro">
             <h1 className="presentation-hero-title">Claire-Lise Gaudelet</h1>
-            <p className="presentation-tagline">Avocate au barreau de Paris.</p>
+            <p className="presentation-tagline">Avocate au Barreau de Paris</p>
             <a href="#presentation-detail" className="presentation-link">
               En savoir plus
             </a>
