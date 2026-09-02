@@ -18,6 +18,8 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="presentation-divider" aria-hidden="true" />
+
         <div id="presentation-detail" className="presentation-detail-header">
           <h2 className="page-title">Présentation</h2>
         </div>
