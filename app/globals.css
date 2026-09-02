@@ -395,7 +395,8 @@ body {
 }
 
 .presentation-detail-header {
-  margin-top: 8px;
+  margin-top: 120px;
+  padding-top: 8px;
 }
 
 .presentation-section + .presentation-section {
