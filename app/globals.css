@@ -398,6 +398,11 @@ body {
   margin-top: 0;
   margin-bottom: 72px;
   padding-top: 0;
+  text-align: center;
+}
+
+.presentation-detail-header .page-title {
+  text-align: center;
 }
 
 .presentation-section:first-of-type {
