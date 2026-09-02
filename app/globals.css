@@ -325,13 +325,20 @@ body {
   filter: contrast(1.03) saturate(0.96);
 }
 
-.presentation-photo-caption {
-  margin-top: 14px;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--text-soft);
-  text-align: left;
-  letter-spacing: -0.01em;
+.presentation-highlight {
+  max-width: 880px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.presentation-highlight-title {
+  margin: 0;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 35px;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text);
 }
 
 .presentation-intro {

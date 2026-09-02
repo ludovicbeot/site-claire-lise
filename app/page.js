@@ -7,9 +7,6 @@ export default function Home() {
         <div className="presentation-hero reveal-soft">
           <div className="presentation-portrait">
             <img src="/images/portrait.png" alt="Portrait de Claire-Lise Gaudelet" />
-            <p className="presentation-photo-caption">
-              Claire-Lise Gaudelet intervient principalement en droit du cinéma et de l'audiovisuel.
-            </p>
           </div>
 
           <div className="presentation-intro">
@@ -19,6 +16,12 @@ export default function Home() {
               En savoir plus
             </a>
           </div>
+        </div>
+
+        <div className="presentation-highlight">
+          <h2 className="presentation-highlight-title">
+            Claire-Lise Gaudelet intervient principalement en droit du cinéma et de l'audiovisuel.
+          </h2>
         </div>
 
         <div id="presentation-detail" className="presentation-detail-header">
