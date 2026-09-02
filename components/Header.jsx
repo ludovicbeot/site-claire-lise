@@ -68,16 +68,6 @@ export default function Header() {
       <header className="site-header">
         <div className="site-header-top">
           <div className="brand-area">
-            <Link href="/" className="brand-logo" aria-label="Retour à l'accueil">
-              <Image
-                src="/images/logo-clg.png"
-                alt="Logo Claire-Lise Gaudelet"
-                width={42}
-                height={42}
-                priority
-              />
-            </Link>
-
             <div className="brand-block">
             </div>
           </div>
