@@ -40,7 +40,12 @@ export default function Home() {
           </p>
 
           <p className="presentation-row presentation-cta">
-            <em>N'hésitez pas à me contacter afin que nous puissions déterminer ensemble les modalités d'intervention correspondant le mieux à votre situation et vos projets.</em>
+            <em>
+              N'hésitez pas à me contacter afin que nous puissions
+              <br />
+              <br />
+              déterminer ensemble les modalités d'intervention correspondant le mieux à votre situation et vos projets.
+            </em>
           </p>
         </section>
       </section>
