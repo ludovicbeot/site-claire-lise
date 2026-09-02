@@ -39,15 +39,13 @@ export default function Home() {
             Mon intérêt pour la création artistique et notamment cinématographique m'a permis de développer une connaissance approfondie de ce secteur au-delà des enjeux juridiques qui lui sont propres, me permettant d'avoir une approche globale et inventive de chaque projet. Je souhaite également mettre au centre de mon activité mon engagement dans la lutte contre les violences sexistes et sexuelles et toute forme de discrimination, notamment en participant à la mise en place en interne de mesures de sensibilisation et de prévention mais plus généralement en conservant toujours cette grille de lecture dans la gestion de l'ensemble des sujets traités. Mon objectif est d'accompagner et sécuriser la fabrication de projets indépendants et exigeants tout en offrant à chaque personne qui participe au processus créatif les meilleures conditions de travail.
           </p>
 
-          <p className="presentation-row presentation-cta">
-            <em>
-              N'hésitez pas à me contacter afin que nous puissions
-              <br />
-              <br />
-              déterminer ensemble les modalités d'intervention correspondant le mieux à votre situation et vos projets.
-            </em>
-          </p>
         </section>
+
+        <p className="presentation-cta">
+          <em>
+            N'hésitez pas à me contacter afin que nous puissions déterminer ensemble les modalités d'intervention correspondant le mieux à votre situation et vos projets.
+          </em>
+        </p>
       </section>
 
       <section id="expertise" className="section expertise-section">
