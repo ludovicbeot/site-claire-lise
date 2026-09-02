@@ -395,7 +395,7 @@ body {
 }
 
 .presentation-detail-header {
-  margin-top: 360px;
+  margin-top: 420px;
   padding-top: 8px;
 }
 
@@ -407,6 +407,12 @@ body {
 
 .presentation-section {
   margin-left: clamp(140px, 15vw, 280px);
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 32px 36px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+  max-width: fit-content;
 }
 
 .presentation-section--shifted {
@@ -478,6 +484,8 @@ body {
 
   .presentation-section {
     margin-left: 0;
+    padding: 24px 20px;
+    max-width: 100%;
   }
 
   .presentation-section--shifted {
