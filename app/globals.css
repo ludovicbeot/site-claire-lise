@@ -407,7 +407,10 @@ body {
 
 .presentation-section--shifted {
   margin-left: clamp(52px, 10vw, 120px);
-  max-width: min(100%, 560px);
+}
+
+.presentation-section--shifted .presentation-row {
+  max-width: 610px;
 }
 
 .presentation-subtitle {
@@ -471,6 +474,9 @@ body {
 
   .presentation-section--shifted {
     margin-left: 0;
+  }
+
+  .presentation-section--shifted .presentation-row {
     max-width: 100%;
   }
 
