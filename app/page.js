@@ -30,7 +30,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="presentation-section">
+        <section className="presentation-section presentation-section--shifted">
           <h2 className="presentation-subtitle">Approche et valeurs</h2>
 
           <p className="presentation-row">
