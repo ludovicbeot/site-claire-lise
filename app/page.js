@@ -7,20 +7,31 @@ export default function Home() {
         <div className="presentation-hero reveal-soft">
           <div className="presentation-portrait">
             <img src="/images/portrait.png" alt="Portrait de Claire-Lise Gaudelet" />
+            <p className="presentation-photo-caption">
+              Claire-Lise Gaudelet intervient principalement en droit du cinéma et de l'audiovisuel.
+            </p>
           </div>
 
-          <div className="presentation-copy">
-            <h1 className="presentation-hero-title">Présentation</h1>
-
-            <div className="presentation-intro-block">
-              <h2 className="presentation-subtitle">Parcours</h2>
-
-              <p className="presentation-row">
-                Avocate au Barreau de Paris depuis 2019, j'ai exercé au sein de différents cabinets d'affaires parisiens et service juridique d'une agence artistique de premier plan spécialisée dans la représentation d'auteur·ice·s (scénaristes et réalisateur·ice·s) et d'artistes-interprètes. La variété de mes expériences professionnelles m'a permis de développer, outre une réelle agilité et une grande capacité d'adaptation, des compétences approfondies en droit de la propriété intellectuelle — avec une expertise particulière en droit d'auteur dans le secteur du cinéma et de l'audiovisuel — et en droit de la presse, tant en conseil qu'en précontentieux et contentieux.
-              </p>
-            </div>
+          <div className="presentation-intro">
+            <h1 className="presentation-hero-title">Claire-Lise Gaudelet</h1>
+            <p className="presentation-tagline">Avocate au barreau de Paris.</p>
+            <a href="#presentation-detail" className="presentation-link">
+              En savoir plus
+            </a>
           </div>
         </div>
+
+        <div id="presentation-detail" className="presentation-detail-header">
+          <h2 className="page-title">Présentation</h2>
+        </div>
+
+        <section className="presentation-section">
+          <h3 className="presentation-subtitle">Parcours</h3>
+
+          <p className="presentation-row">
+            Avocate au Barreau de Paris depuis 2019, j'ai exercé au sein de différents cabinets d'affaires parisiens et service juridique d'une agence artistique de premier plan spécialisée dans la représentation d'auteur·ice·s (scénaristes et réalisateur·ice·s) et d'artistes-interprètes. La variété de mes expériences professionnelles m'a permis de développer, outre une réelle agilité et une grande capacité d'adaptation, des compétences approfondies en droit de la propriété intellectuelle — avec une expertise particulière en droit d'auteur dans le secteur du cinéma et de l'audiovisuel — et en droit de la presse, tant en conseil qu'en précontentieux et contentieux.
+          </p>
+        </section>
 
         <section className="presentation-section">
           <h2 className="presentation-subtitle">Approche et valeurs</h2>
