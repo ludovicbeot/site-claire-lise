@@ -395,8 +395,13 @@ body {
 }
 
 .presentation-detail-header {
-  margin-top: 700px;
-  padding-top: 16px;
+  margin-top: 0;
+  margin-bottom: 72px;
+  padding-top: 0;
+}
+
+.presentation-section:first-of-type {
+  margin-top: 0;
 }
 
 .presentation-divider {
