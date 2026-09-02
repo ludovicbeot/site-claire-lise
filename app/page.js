@@ -3,18 +3,24 @@ import Accordion from "../components/Accordion";
 export default function Home() {
   return (
     <main className="page">
-      <section id="presentation" className="section presentation-section">
-        <div className="section-header reveal-soft">
-          <h1 className="page-title">Présentation</h1>
+      <section id="presentation" className="section presentation-page">
+        <div className="presentation-hero reveal-soft">
+          <div className="presentation-portrait">
+            <img src="/images/portrait.png" alt="Portrait de Claire-Lise Gaudelet" />
+          </div>
+
+          <div className="presentation-copy">
+            <h1 className="presentation-hero-title">Présentation</h1>
+
+            <div className="presentation-intro-block">
+              <h2 className="presentation-subtitle">Parcours</h2>
+
+              <p className="presentation-row">
+                Avocate au Barreau de Paris depuis 2019, j'ai exercé au sein de différents cabinets d'affaires parisiens et service juridique d'une agence artistique de premier plan spécialisée dans la représentation d'auteur·ice·s (scénaristes et réalisateur·ice·s) et d'artistes-interprètes. La variété de mes expériences professionnelles m'a permis de développer, outre une réelle agilité et une grande capacité d'adaptation, des compétences approfondies en droit de la propriété intellectuelle — avec une expertise particulière en droit d'auteur dans le secteur du cinéma et de l'audiovisuel — et en droit de la presse, tant en conseil qu'en précontentieux et contentieux.
+              </p>
+            </div>
+          </div>
         </div>
-
-        <section className="presentation-section">
-          <h2 className="presentation-subtitle">Parcours</h2>
-
-          <p className="presentation-row">
-            Avocate au Barreau de Paris depuis 2019, j'ai exercé au sein de différents cabinets d'affaires parisiens et service juridique d'une agence artistique de premier plan spécialisée dans la représentation d'auteur·ice·s (scénaristes et réalisateur·ice·s) et d'artistes-interprètes. La variété de mes expériences professionnelles m'a permis de développer, outre une réelle agilité et une grande capacité d'adaptation, des compétences approfondies en droit de la propriété intellectuelle — avec une expertise particulière en droit d'auteur dans le secteur du cinéma et de l'audiovisuel — et en droit de la presse, tant en conseil qu'en précontentieux et contentieux.
-          </p>
-        </section>
 
         <section className="presentation-section">
           <h2 className="presentation-subtitle">Approche et valeurs</h2>
