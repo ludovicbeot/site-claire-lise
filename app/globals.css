@@ -861,24 +861,21 @@ a.contact-detail-value:hover {
 .contact-linkedin {
   display: inline-flex;
   align-items: center;
-  width: fit-content;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
   margin: 56px auto 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.72rem;
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
   color: var(--text);
-  border-bottom: 1px solid var(--line-strong);
-  padding-bottom: 5px;
-  transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 
 .contact-linkedin:hover {
-  opacity: 0.75;
+  background: var(--text);
+  color: var(--bg);
   border-color: var(--text);
-  transform: translateX(2px);
+  transform: translateY(-2px);
 }
 
 /* =========================
@@ -886,46 +883,61 @@ a.contact-detail-value:hover {
 ========================= */
 
 .legal-content {
-  max-width: 900px;
+  max-width: 640px;
   display: grid;
-  gap: 36px;
 }
 
 .legal-section {
-  padding: 28px 32px;
-  border: 1px solid var(--panel-border);
-  border-radius: var(--radius-lg);
-  background: rgba(0, 0, 0, 0.02);
-  backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-soft);
-  transition: all 0.3s ease;
+  padding: 34px 0;
+  border-bottom: 1px solid var(--line);
 }
 
-.legal-section:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-deep);
+.legal-section:first-child {
+  padding-top: 0;
+}
+
+.legal-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .legal-section h2 {
-  margin: 0 0 20px 0;
+  margin: 0 0 16px 0;
   font-family: 'Darker Grotesque', Arial, Helvetica, sans-serif;
-  font-size: 1.4rem;
+  font-size: 0.82rem;
   line-height: 1.3;
-  font-weight: 700;
-  color: var(--text);
+  font-weight: 600;
+  color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.13em;
 }
 
 .legal-section p {
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
   font-size: 16px;
   line-height: 1.7;
-  color: var(--text-soft);
+  color: var(--text);
 }
 
 .legal-section p:last-child {
   margin-bottom: 0;
+}
+
+.legal-section a {
+  border-bottom: 1px solid var(--line-strong);
+  transition: opacity 0.2s ease;
+}
+
+.legal-section a:hover {
+  opacity: 0.6;
+}
+
+.legal-blank {
+  display: inline-block;
+  min-width: 200px;
+  height: 1em;
+  vertical-align: -0.15em;
+  border-bottom: 1px solid var(--line-strong);
 }
 
 /* =========================
@@ -1031,10 +1043,6 @@ a.contact-detail-value:hover {
 
   .expertise-layout {
     gap: 40px;
-  }
-
-  .legal-content {
-    gap: 24px;
   }
 }
 
@@ -1142,7 +1150,7 @@ a.contact-detail-value:hover {
   }
 
   .legal-section {
-    padding: 20px 16px;
+    padding: 24px 0;
   }
 }
 
