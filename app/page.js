@@ -1,4 +1,4 @@
-import Accordion from "../components/Accordion";
+import ExpertiseAccordion from "../components/ExpertiseAccordion";
 
 export default function Home() {
   return (
@@ -49,29 +49,13 @@ export default function Home() {
       </section>
 
       <section id="expertise" className="section expertise-section">
-        <div className="section-header reveal-soft">
+        <div className="expertise-section-header reveal-soft">
           <h1 className="page-title">Expertises</h1>
+          <div className="expertise-title-line" aria-hidden="true" />
         </div>
 
-        <div className="expertise-accordion reveal-soft">
-          {expertises.map((expertise, index) => (
-            <Accordion key={index} title={expertise.title} isOpenByDefault={index === 0}>
-              <div className="expertise-content">
-                {expertise.entries.map((entry, entryIndex) => (
-                  <div className="expertise-entry" key={entryIndex}>
-                    <p className="expertise-dash">{entry.dash}</p>
-                    {entry.bullets && (
-                      <ul className="expertise-sublist">
-                        {entry.bullets.map((bullet, bulletIndex) => (
-                          <li key={bulletIndex}>{bullet}</li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </Accordion>
-          ))}
+        <div className="reveal-soft">
+          <ExpertiseAccordion items={expertises} />
         </div>
       </section>
 
