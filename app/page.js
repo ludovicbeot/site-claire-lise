@@ -48,10 +48,11 @@ export default function Home() {
         </p>
       </section>
 
+      <div className="presentation-divider" aria-hidden="true" />
+
       <section id="expertise" className="section expertise-section">
-        <div className="expertise-section-header reveal-soft">
+        <div className="section-title-block reveal-soft">
           <h1 className="page-title">Expertises</h1>
-          <div className="expertise-title-line" aria-hidden="true" />
         </div>
 
         <div className="reveal-soft">
@@ -60,17 +61,27 @@ export default function Home() {
       </section>
 
       <section id="contact" className="section contact-section">
-        <div className="section-header reveal-soft">
+        <div className="section-title-block reveal-soft">
           <h1 className="page-title">Contact</h1>
         </div>
 
-        <div className="contact-card">
-          <div className="contact-info">
-            <h2>Claire-Lise Gaudelet — Avocate au barreau de Paris</h2>
-            <div className="contact-details">
-              <p><strong>tél.</strong> : <a href="tel:+33671178405">06 71 17 84 05</a></p>
-              <p><strong>email</strong> : <a href="mailto:clairelise@clg-avocate.com">clairelise@clg-avocate.com</a></p>
-              <p><strong>adresse</strong> : 5 rue d'Aboukir — 75002 Paris</p>
+        <div className="contact-layout reveal-soft">
+          <p className="contact-lede">Claire-Lise Gaudelet — Avocate au Barreau de Paris</p>
+
+          <div className="contact-grid">
+            <div className="contact-detail">
+              <span className="contact-detail-label">Téléphone</span>
+              <a className="contact-detail-value" href="tel:+33671178405">06 71 17 84 05</a>
+            </div>
+
+            <div className="contact-detail">
+              <span className="contact-detail-label">Email</span>
+              <a className="contact-detail-value" href="mailto:clairelise@clg-avocate.com">clairelise@clg-avocate.com</a>
+            </div>
+
+            <div className="contact-detail">
+              <span className="contact-detail-label">Adresse</span>
+              <span className="contact-detail-value">5 rue d'Aboukir — 75002 Paris</span>
             </div>
           </div>
         </div>

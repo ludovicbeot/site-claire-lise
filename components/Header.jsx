@@ -74,7 +74,7 @@ export default function Header() {
 
           <nav className="main-nav" aria-label="Navigation principale">
             <button
-              onClick={() => scrollToSection("presentation")}
+              onClick={() => scrollToSection("presentation-detail")}
               className={`nav-link ${activeSection === "presentation" ? "active" : ""}`}
             >
               présentation
