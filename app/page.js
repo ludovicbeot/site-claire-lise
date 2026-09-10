@@ -40,12 +40,6 @@ export default function Home() {
           </p>
 
         </section>
-
-        <p className="presentation-cta">
-          <em>
-            N'hésitez pas à me contacter afin que nous puissions déterminer ensemble les modalités d'intervention correspondant le mieux à votre situation et vos projets.
-          </em>
-        </p>
       </section>
 
       <div className="presentation-divider" aria-hidden="true" />
@@ -59,6 +53,8 @@ export default function Home() {
           <ExpertiseAccordion items={expertises} />
         </div>
       </section>
+
+      <div className="presentation-divider" aria-hidden="true" />
 
       <section id="contact" className="section contact-section">
         <div className="section-title-block reveal-soft">
@@ -84,6 +80,15 @@ export default function Home() {
               <span className="contact-detail-value">5 rue d'Aboukir — 75002 Paris</span>
             </div>
           </div>
+
+          <a
+            className="contact-linkedin"
+            href="https://www.linkedin.com/in/claire-lise-gaudelet-abb082ba"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Suivre sur LinkedIn
+          </a>
         </div>
       </section>
     </main>
