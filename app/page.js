@@ -36,7 +36,7 @@ export default function Home() {
           <h2 className="presentation-subtitle">Approche et valeurs</h2>
 
           <p className="presentation-row">
-            Mon intérêt pour la création artistique et notamment cinématographique m'a permis de développer une connaissance approfondie de ce secteur au-delà des enjeux juridiques qui lui sont propres, me permettant d'avoir une approche globale et inventive de chaque projet. Je souhaite également mettre au centre de mon activité mon engagement dans la lutte contre les violences sexistes et sexuelles et toute forme de discrimination, notamment en participant à la mise en place en interne de mesures de sensibilisation et de prévention et plus généralement en conservant toujours cette grille de lecture dans la gestion de l'ensemble des sujets traités. Mon objectif est d'accompagner et sécuriser la fabrication de projets indépendants et exigeants tout en offrant à chaque personne qui participe au processus créatif les meilleures conditions de travail.
+            Mon intérêt pour la création artistique et notamment cinématographique m'a permis de développer une connaissance approfondie de ce secteur au-delà des enjeux juridiques qui lui sont propres, me permettant d'avoir une approche globale et inventive de chaque projet. Je souhaite également mettre au centre de mon activité mon engagement dans la lutte contre les violences sexistes et sexuelles et toute forme de discrimination. Mon objectif est d'accompagner et sécuriser la fabrication de projets indépendants et exigeants tout en offrant à chaque personne qui participe au processus créatif les meilleures conditions de travail.
           </p>
 
         </section>
@@ -129,10 +129,10 @@ const expertises = [
     title: "Mandataire d'artistes",
     entries: [
       {
-        dash: "Accompagnement à chaque étape de la création, de la recherche d'un·e producteur·ice ou de la mise en place d'une autoproduction, relecture des étapes d'écriture, visionnage de rushes et bout à bout jusqu'à l'établissement de la version définitive ;",
+        dash: "Accompagnement à chaque étape de la création jusqu'à l'établissement de la version définitive ;",
       },
       {
-        dash: "Rédaction et négociation de contrats de cession de droits, coproduction ou association à la production, accompagnement dans le cadre d'autoproductions sur l'ensemble des problématiques juridiques et recherches de financements ;",
+        dash: "Rédaction et négociation de contrats de cession de droits, coproduction ou association à la production, accompagnement dans le cadre d'autoproductions sur l'ensemble des problématiques juridiques ;",
       },
       {
         dash: "Défense et protection des droits et intérêts des artistes en précontentieux et contentieux.",
@@ -143,7 +143,7 @@ const expertises = [
     title: "Droit de la presse",
     entries: [
       {
-        dash: "Relecture d'articles, scénarios, ouvrages et visionnage de rushes en amont afin d'assurer notamment le respect du droit à la vie privée, droit à l'image, respect de l'honneur, de la présomption d'innocence et conformité aux dispositions de la loi du 29 juillet 1881 en matière de délits de presse ;",
+        dash: "Relecture d'articles et d'ouvrages en amont afin d'assurer notamment le respect du droit à la vie privée, droit à l'image, respect de l'honneur, de la présomption d'innocence et conformité aux dispositions de la loi du 29 juillet 1881 en matière de délits de presse ;",
       },
       {
         dash: "Conseil, assistance et représentation, en précontentieux et contentieux en matière de diffamation, injure, provocation à la haine, à la discrimination ou à la violence, rédaction de droits de réponse, demande de retraits, dénonciation calomnieuse notamment dans le cadre de procédures dites bâillon.",

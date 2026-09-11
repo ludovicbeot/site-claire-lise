@@ -21,8 +21,9 @@ export default function MentionsLegales() {
         <div className="legal-section">
           <h2>Informations légales</h2>
           <p>Toque : S0436</p>
-          <p>Entreprise individuelle enregistrée sous le numéro de SIRET 847 902 640 00048</p>
-          <p>TVA intracommunautaire : FR11847902640</p>
+          <p>Entreprise individuelle</p>
+          <p>Siret n° 847 902 640 00048</p>
+          <p>TVA intracommunautaire n° FR11847902640</p>
         </div>
 
         <div className="legal-section">

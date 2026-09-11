@@ -21,9 +21,7 @@ export default function ExpertiseAccordion({ items }) {
                 aria-controls={`expertise-panel-${index}`}
               >
                 <span className="expertise-list-title">{item.title}</span>
-                <span className="expertise-list-icon" aria-hidden="true">
-                  {isActive ? "×" : "+"}
-                </span>
+                <span className="expertise-list-icon" aria-hidden="true" />
               </button>
             </li>
           );

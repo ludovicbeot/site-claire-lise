@@ -673,16 +673,21 @@ body {
 
 .expertise-list-icon {
   flex: 0 0 auto;
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 1;
-  color: var(--text-muted);
-  transition: color 0.25s ease;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--text-muted);
+  background: transparent;
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
-.expertise-list-btn.active .expertise-list-icon,
 .expertise-list-btn:hover .expertise-list-icon {
-  color: var(--text);
+  border-color: var(--text);
+}
+
+.expertise-list-btn.active .expertise-list-icon {
+  background: var(--text);
+  border-color: var(--text);
 }
 
 .expertise-panel {
@@ -748,7 +753,7 @@ body {
 
 .expertise-dash {
   position: relative;
-  padding-left: 16px;
+  padding-left: 14px;
   font-size: 16px;
   line-height: 1.7;
   color: var(--text);
@@ -756,12 +761,13 @@ body {
 }
 
 .expertise-dash::before {
-  content: "–";
+  content: "";
   position: absolute;
   left: 0;
-  top: 0;
-  color: var(--text);
-  font-weight: 600;
+  top: 0.72em;
+  width: 6px;
+  height: 1.5px;
+  background: var(--text);
 }
 
 .expertise-sublist {
