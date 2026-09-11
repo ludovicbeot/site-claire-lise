@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 export default function Header() {
+  const pathname = usePathname();
   const [activeSection, setActiveSection] = useState("presentation");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -17,6 +19,8 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
+    if (pathname !== "/") return;
+
     const handleScroll = () => {
       const sections = ["presentation", "expertise", "contact"];
       const scrollPosition = window.scrollY + 100;
@@ -34,7 +38,20 @@ export default function Header() {
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (pathname !== "/") return;
+    const hash = window.location.hash?.slice(1);
+    if (!hash) return;
+    const timer = setTimeout(() => {
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "instant" });
+      }
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [pathname]);
 
   const getSectionTitle = (section) => {
     switch (section) {
@@ -50,6 +67,10 @@ export default function Header() {
   };
 
   const scrollToSection = (sectionId) => {
+    if (pathname !== "/") {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

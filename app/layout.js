@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <footer className="site-footer shell">
           <div className="footer-inner">
             <p>Claire-Lise Gaudelet — Avocate au Barreau de Paris</p>
-            <Link href="/mentions-legales">mentions légales</Link>
+            <Link href="/mentions-legales">Mentions légales</Link>
           </div>
         </footer>
       </body>

@@ -13,7 +13,7 @@ export default function MentionsLegales() {
 
         <div className="legal-section">
           <h2>Coordonnées</h2>
-          <p>Téléphone : <a href="tel:+33671178405">06 71 17 84 05</a></p>
+          <p>Téléphone : <a href="tel:+33671178405">+33 6 71 17 84 05</a></p>
           <p>Email : <a href="mailto:clairelise@clg-avocate.com">clairelise@clg-avocate.com</a></p>
           <p>Adresse : 5 rue d'Aboukir – 75002 Paris</p>
         </div>

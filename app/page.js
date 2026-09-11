@@ -67,7 +67,7 @@ export default function Home() {
           <div className="contact-grid">
             <div className="contact-detail">
               <span className="contact-detail-label">Téléphone</span>
-              <a className="contact-detail-value" href="tel:+33671178405">06 71 17 84 05</a>
+              <a className="contact-detail-value" href="tel:+33671178405">+33 6 71 17 84 05</a>
             </div>
 
             <div className="contact-detail">
