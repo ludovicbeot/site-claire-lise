@@ -8,14 +8,14 @@ export default function MentionsLegales() {
       <section className="legal-content">
         <div className="legal-section">
           <h2>Éditrice et directrice de la publication</h2>
-          <p>Claire-Lise Gaudelet — Avocate au Barreau de Paris</p>
+          <p>Claire-Lise Gaudelet – Avocate au Barreau de Paris</p>
         </div>
 
         <div className="legal-section">
           <h2>Coordonnées</h2>
           <p>Téléphone : <a href="tel:+33671178405">06 71 17 84 05</a></p>
           <p>Email : <a href="mailto:clairelise@clg-avocate.com">clairelise@clg-avocate.com</a></p>
-          <p>Adresse : 5 rue d'Aboukir — 75002 Paris</p>
+          <p>Adresse : 5 rue d'Aboukir – 75002 Paris</p>
         </div>
 
         <div className="legal-section">
@@ -29,7 +29,7 @@ export default function MentionsLegales() {
         <div className="legal-section">
           <h2>Hébergeur</h2>
           <p>Vercel Inc.</p>
-          <p>440 N Barranca Ave #4133 — Covina, CA 91723, États-Unis</p>
+          <p>440 N Barranca Ave #4133 – Covina, CA 91723, États-Unis</p>
         </div>
 
         <div className="legal-section">

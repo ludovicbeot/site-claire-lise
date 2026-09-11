@@ -753,7 +753,7 @@ body {
 
 .expertise-dash {
   position: relative;
-  padding-left: 14px;
+  padding-left: 11px;
   font-size: 16px;
   line-height: 1.7;
   color: var(--text);
@@ -765,7 +765,7 @@ body {
   position: absolute;
   left: 0;
   top: 0.72em;
-  width: 6px;
+  width: 4px;
   height: 1.5px;
   background: var(--text);
 }
