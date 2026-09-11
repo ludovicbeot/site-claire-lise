@@ -932,14 +932,6 @@ a.contact-detail-value:hover {
   opacity: 0.6;
 }
 
-.legal-blank {
-  display: inline-block;
-  min-width: 200px;
-  height: 1em;
-  vertical-align: -0.15em;
-  border-bottom: 1px solid var(--line-strong);
-}
-
 /* =========================
    FOOTER
 ========================= */

@@ -28,7 +28,7 @@ export default function Home() {
           <h3 className="presentation-subtitle">Parcours</h3>
 
           <p className="presentation-row">
-            Avocate au Barreau de Paris depuis 2019, j'ai exercé au sein de différents cabinets d'affaires parisiens et service juridique d'une agence artistique de premier plan spécialisée dans la représentation d'auteur·ice·s (scénaristes et réalisateur·ice·s) et d'artistes-interprètes. La variété de mes expériences professionnelles m'a permis de développer, outre une réelle agilité et une grande capacité d'adaptation, des compétences approfondies en droit de la propriété intellectuelle — avec une expertise particulière en droit d'auteur dans le secteur du cinéma et de l'audiovisuel — et en droit de la presse, tant en conseil qu'en précontentieux et contentieux.
+            Avocate au Barreau de Paris depuis 2019, j'ai exercé au sein de différents cabinets d'affaires parisiens et service juridique d'une agence artistique spécialisée dans la représentation d'auteur·ice·s (scénaristes et réalisateur·ice·s) et d'artistes-interprètes. La variété de mes expériences professionnelles m'a permis de développer, outre une réelle agilité et une grande capacité d'adaptation, des compétences approfondies en droit de la propriété intellectuelle — avec une expertise particulière en droit d'auteur dans le secteur du cinéma et de l'audiovisuel — et en droit de la presse, tant en conseil qu'en précontentieux et contentieux.
           </p>
         </section>
 
@@ -36,7 +36,7 @@ export default function Home() {
           <h2 className="presentation-subtitle">Approche et valeurs</h2>
 
           <p className="presentation-row">
-            Mon intérêt pour la création artistique et notamment cinématographique m'a permis de développer une connaissance approfondie de ce secteur au-delà des enjeux juridiques qui lui sont propres, me permettant d'avoir une approche globale et inventive de chaque projet. Je souhaite également mettre au centre de mon activité mon engagement dans la lutte contre les violences sexistes et sexuelles et toute forme de discrimination, notamment en participant à la mise en place en interne de mesures de sensibilisation et de prévention mais plus généralement en conservant toujours cette grille de lecture dans la gestion de l'ensemble des sujets traités. Mon objectif est d'accompagner et sécuriser la fabrication de projets indépendants et exigeants tout en offrant à chaque personne qui participe au processus créatif les meilleures conditions de travail.
+            Mon intérêt pour la création artistique et notamment cinématographique m'a permis de développer une connaissance approfondie de ce secteur au-delà des enjeux juridiques qui lui sont propres, me permettant d'avoir une approche globale et inventive de chaque projet. Je souhaite également mettre au centre de mon activité mon engagement dans la lutte contre les violences sexistes et sexuelles et toute forme de discrimination, notamment en participant à la mise en place en interne de mesures de sensibilisation et de prévention et plus généralement en conservant toujours cette grille de lecture dans la gestion de l'ensemble des sujets traités. Mon objectif est d'accompagner et sécuriser la fabrication de projets indépendants et exigeants tout en offrant à chaque personne qui participe au processus créatif les meilleures conditions de travail.
           </p>
 
         </section>
@@ -143,10 +143,10 @@ const expertises = [
     title: "Droit de la presse",
     entries: [
       {
-        dash: "Relecture d'articles et d'ouvrages en amont afin d'assurer notamment le respect du droit à la vie privée, droit à l'image, respect de l'honneur, de la présomption d'innocence et conformité aux dispositions de la loi du 29 juillet 1881 en matière de délits de presse ;",
+        dash: "Relecture d'articles, scénarios, ouvrages et visionnage de rushes en amont afin d'assurer notamment le respect du droit à la vie privée, droit à l'image, respect de l'honneur, de la présomption d'innocence et conformité aux dispositions de la loi du 29 juillet 1881 en matière de délits de presse ;",
       },
       {
-        dash: "Conseil, assistance et représentation, en précontentieux et contentieux en matière de diffamation, injure, provocation à la haine, à la discrimination ou à la violence, rédaction de droits de réponse, demande de retraits.",
+        dash: "Conseil, assistance et représentation, en précontentieux et contentieux en matière de diffamation, injure, provocation à la haine, à la discrimination ou à la violence, rédaction de droits de réponse, demande de retraits, dénonciation calomnieuse notamment dans le cadre de procédures dites bâillon.",
       },
     ],
   },
@@ -154,10 +154,11 @@ const expertises = [
     title: "Lutte contre les violences sexistes et sexuelles et toute forme de discrimination",
     entries: [
       {
-        dash: "Audit interne et accompagnement dans la mise en place de bonnes pratiques au sein des sociétés de production dès l'écriture et jusqu'à l'issue de la post-production :",
+        dash: "Audit interne, formations et accompagnement dans la mise en place de bonnes pratiques au sein des sociétés de production dès l'écriture et jusqu'à l'issue de la post-production par le biais de :",
         bullets: [
-          "l'établissement du DUERP,",
-          "la mise en place d'une procédure interne de signalement,",
+          "l'organisation de formations et d'actions de sensibilisation ;",
+          "l'établissement et/ou la mise à jour du DUERP ;",
+          "la mise en place d'une procédure interne de signalement ;",
           "l'assistance des référent·e·s VHSS notamment dans l'organisation des actions de sensibilisation et de prévention des VHSS et le traitement des signalements internes ;",
         ],
       },

@@ -7,7 +7,7 @@ export default function MentionsLegales() {
 
       <section className="legal-content">
         <div className="legal-section">
-          <h2>Directrice de la publication</h2>
+          <h2>Éditrice et directrice de la publication</h2>
           <p>Claire-Lise Gaudelet — Avocate au Barreau de Paris</p>
         </div>
 
@@ -20,14 +20,21 @@ export default function MentionsLegales() {
 
         <div className="legal-section">
           <h2>Informations légales</h2>
-          <p>SIRET : <span className="legal-blank" /></p>
-          <p>TVA intracommunautaire : <span className="legal-blank" /></p>
+          <p>Toque : S0436</p>
+          <p>Entreprise individuelle enregistrée sous le numéro de SIRET 847 902 640 00048</p>
+          <p>TVA intracommunautaire : FR11847902640</p>
         </div>
 
         <div className="legal-section">
           <h2>Hébergeur</h2>
           <p>Vercel Inc.</p>
           <p>440 N Barranca Ave #4133 — Covina, CA 91723, États-Unis</p>
+        </div>
+
+        <div className="legal-section">
+          <h2>Propriété intellectuelle</h2>
+          <p>Photographie : Lou-Anna Ralite</p>
+          <p><a href="https://www.louanna-ralite.com/" target="_blank" rel="noopener noreferrer">www.louanna-ralite.com</a></p>
         </div>
       </section>
     </main>
