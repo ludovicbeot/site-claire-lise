@@ -90,6 +90,17 @@ export default function Header() {
         <div className="site-header-top">
           <div className="brand-area">
             <div className="brand-block">
+              <button
+                type="button"
+                onClick={() => scrollToSection("presentation")}
+                className="site-brand"
+              >
+                <span className="site-brand-line">claire-lise</span>
+                <span className="site-brand-line">
+                  <span className="site-brand-dot" aria-hidden="true">•</span>
+                  gaudelet
+                </span>
+              </button>
             </div>
           </div>
 

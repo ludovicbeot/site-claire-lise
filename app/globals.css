@@ -181,6 +181,35 @@ h6 {
   color: var(--text);
 }
 
+.site-brand {
+  display: grid;
+  gap: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Darker Grotesque', Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  color: rgba(0, 0, 0, 0.42);
+  transition: color 0.25s ease;
+}
+
+.site-brand:hover {
+  color: var(--text);
+}
+
+.site-brand-line {
+  display: block;
+}
+
+.site-brand-dot {
+  margin-right: 1px;
+}
+
 .brand-subtitle {
   font-size: 1rem;
   line-height: 1.4;
