@@ -182,36 +182,24 @@ h6 {
 }
 
 .site-brand {
-  display: grid;
-  gap: 0;
+  display: inline-flex;
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  text-align: left;
-  font-family: 'Darker Grotesque', Arial, Helvetica, sans-serif;
-  font-size: 1.3rem;
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: 0.01em;
-  color: rgba(0, 0, 0, 0.42);
-  transition: color 0.25s ease;
+  line-height: 0;
+  opacity: 0.42;
+  transition: opacity 0.25s ease;
 }
 
 .site-brand:hover {
-  color: var(--text);
+  opacity: 1;
 }
 
-.site-brand-line {
+.site-brand-image {
   display: block;
-}
-
-.site-brand-dot {
-  display: inline-block;
-  margin-right: 2px;
-  font-size: 1.8em;
-  line-height: 0;
-  vertical-align: -0.28em;
+  width: 160px;
+  height: auto;
 }
 
 .brand-subtitle {

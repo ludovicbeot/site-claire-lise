@@ -95,11 +95,14 @@ export default function Header() {
                 onClick={() => scrollToSection("presentation")}
                 className="site-brand"
               >
-                <span className="site-brand-line">claire-lise</span>
-                <span className="site-brand-line">
-                  <span className="site-brand-dot" aria-hidden="true">•</span>
-                  gaudelet
-                </span>
+                <Image
+                  src="/images/logo-clg.png"
+                  alt="Claire-Lise Gaudelet"
+                  width={360}
+                  height={123}
+                  className="site-brand-image"
+                  priority
+                />
               </button>
             </div>
           </div>
