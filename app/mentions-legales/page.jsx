@@ -30,6 +30,7 @@ export default function MentionsLegales() {
           <h2>Hébergeur</h2>
           <p>Vercel Inc.</p>
           <p>440 N Barranca Ave #4133 – Covina, CA 91723, États-Unis</p>
+          <p>Téléphone : <a href="tel:+15592887060">+1 559 288 7060</a></p>
         </div>
 
         <div className="legal-section">
