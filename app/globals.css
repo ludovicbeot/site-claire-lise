@@ -447,6 +447,10 @@ body {
   );
 }
 
+.presentation-divider--hero {
+  margin-top: 130px;
+}
+
 .presentation-section + .presentation-section {
   margin-top: 40px;
   padding-top: 32px;
@@ -459,7 +463,7 @@ body {
 }
 
 .presentation-section--shifted {
-  margin-left: clamp(500px, 55vw, 850px);
+  margin-left: clamp(430px, 50vw, 770px);
 }
 
 .presentation-section--shifted .presentation-row {
