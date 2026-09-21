@@ -448,7 +448,7 @@ body {
 }
 
 .presentation-divider--hero {
-  margin-top: 130px;
+  margin-top: 220px;
 }
 
 .presentation-section + .presentation-section {
@@ -458,12 +458,12 @@ body {
 }
 
 .presentation-section {
-  margin-left: clamp(140px, 15vw, 280px);
+  margin-left: clamp(90px, 10vw, 200px);
   max-width: fit-content;
 }
 
 .presentation-section--shifted {
-  margin-left: clamp(430px, 50vw, 770px);
+  margin-left: clamp(360px, 43vw, 660px);
 }
 
 .presentation-section--shifted .presentation-row {
