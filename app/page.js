@@ -160,6 +160,7 @@ const expertises = [
           "l'établissement et/ou la mise à jour du DUERP ;",
           "la mise en place d'une procédure interne de signalement ;",
           "l'assistance des référent·e·s VHSS notamment dans l'organisation des actions de sensibilisation et de prévention des VHSS et le traitement des signalements internes ;",
+          "conduite et/ou accompagnement d'enquêtes internes en cas de signalements ;",
         ],
       },
       {

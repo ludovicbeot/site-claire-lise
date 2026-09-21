@@ -448,7 +448,8 @@ body {
 }
 
 .presentation-divider--hero {
-  margin-top: 220px;
+  margin-top: 140px;
+  margin-bottom: 56px;
 }
 
 .presentation-section + .presentation-section {
