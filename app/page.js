@@ -1,3 +1,4 @@
+import Script from "next/script";
 import ExpertiseAccordion from "../components/ExpertiseAccordion";
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
 
           <div className="presentation-intro">
             <h1 className="presentation-hero-title">Claire-Lise Gaudelet</h1>
-            <p className="presentation-tagline">Avocate au Barreau de Paris</p>
+            <p className="presentation-tagline">Avocate en droit du cinéma, de l'audiovisuel &amp; des médias</p>
             <a href="#presentation-detail" className="presentation-link">
               En savoir plus
             </a>
@@ -36,7 +37,7 @@ export default function Home() {
           <h2 className="presentation-subtitle">Approche et valeurs</h2>
 
           <p className="presentation-row">
-            Mon intérêt pour la création artistique et notamment cinématographique m'a permis de développer une connaissance approfondie de ce secteur au-delà des enjeux juridiques qui lui sont propres, me permettant d'avoir une approche globale et inventive de chaque projet. Je souhaite également mettre au centre de mon activité mon engagement dans la lutte contre les violences sexistes et sexuelles et toute forme de discrimination. Mon objectif est d'accompagner et sécuriser la fabrication de projets indépendants et exigeants tout en offrant à chaque personne qui participe au processus créatif les meilleures conditions de travail.
+            Mon intérêt pour la création artistique et notamment cinématographique m'a permis d'acquérir une connaissance approfondie de ce secteur au-delà des enjeux juridiques qui lui sont propres, me permettant d'avoir une approche globale et inventive de chaque projet. Je souhaite également mettre au centre de mon activité mon engagement dans la lutte contre les violences, harcèlements moraux, sexistes et sexuels et toute forme de discrimination. Mon objectif est d'accompagner et sécuriser la fabrication de projets indépendants et exigeants tout en offrant à chaque personne qui participe au processus créatif les meilleures conditions de travail.
           </p>
 
         </section>
@@ -95,8 +96,24 @@ export default function Home() {
               />
             </svg>
           </a>
+
+          <div className="contact-widget">
+            <a
+              className="avocat-consultingwidget"
+              href="https://consultation.avocat.fr/avocat-61305-20d2.html"
+              data-widget-id="09216e26c7b613b37655"
+            >
+              Consulter mon profil Avocat.fr
+            </a>
+          </div>
         </div>
       </section>
+
+      <Script
+        id="avocat-widget"
+        src="https://consultation.avocat.fr/js/consultingwidget.js"
+        strategy="afterInteractive"
+      />
     </main>
   );
 }
@@ -113,7 +130,7 @@ const expertises = [
           "contrats d'auteur·ice·s au forfait, scénaristes, réalisateur·ice·s, compositeur·ice·s ;",
           "contrats d'artiste-interprètes et de technicien·ne·s (metteur·se·s en scène, directeur·ice·s artistiques) ;",
           "contrats de production (déléguée, exécutive, coproduction, association à la production) ;",
-          "contrats d'exploitation (mandats de distribution, achats et préachats, ventes internationales) ;",
+          "contrats d'exploitation (mandats de distribution, achats et préachats, ventes internationales).",
         ],
       },
       { dash: "Audit, analyse de contrats et de la chaîne de droits ;" },
@@ -126,7 +143,7 @@ const expertises = [
     ],
   },
   {
-    title: "Mandataire d'artistes",
+    title: "Droit d'auteur et mandataire d'artistes",
     entries: [
       {
         dash: "Accompagnement à chaque étape de la création jusqu'à l'établissement de la version définitive ;",
@@ -160,7 +177,7 @@ const expertises = [
           "l'établissement et/ou la mise à jour du DUERP ;",
           "la mise en place d'une procédure interne de signalement ;",
           "l'assistance des référent·e·s VHSS notamment dans l'organisation des actions de sensibilisation et de prévention des VHSS et le traitement des signalements internes ;",
-          "conduite et/ou accompagnement d'enquêtes internes en cas de signalements ;",
+          "conduite et/ou accompagnement d'enquêtes internes en cas de signalements.",
         ],
       },
       {
