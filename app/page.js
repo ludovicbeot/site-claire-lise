@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ExpertiseAccordion from "../components/ExpertiseAccordion";
 
 const jsonLd = {
@@ -37,7 +38,14 @@ export default function Home() {
       <section id="presentation" className="section presentation-page">
         <div className="presentation-hero reveal-soft">
           <div className="presentation-portrait">
-            <img src="/images/portrait.png" alt="Portrait de Claire-Lise Gaudelet" />
+            <Image
+              src="/images/portrait.webp"
+              alt="Portrait de Claire-Lise Gaudelet"
+              width={1120}
+              height={1344}
+              sizes="(max-width: 768px) 360px, 560px"
+              priority
+            />
           </div>
 
           <div className="presentation-intro">
