@@ -3,7 +3,7 @@ import Link from "next/link";
 import Header from "../components/Header";
 
 const title =
-  "Claire-Lise Gaudelet – Avocate en droit du cinéma et de la presse";
+  "Claire-Lise Gaudelet – Avocate en droit du cinéma & des médias";
 const description =
   "Claire-Lise Gaudelet, avocate au Barreau de Paris : droit d’auteur, contrats de production cinéma et audiovisuel, droit de la presse. Conseil et contentieux.";
 
