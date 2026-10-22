@@ -1,8 +1,39 @@
 import ExpertiseAccordion from "../components/ExpertiseAccordion";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Attorney",
+  name: "Claire-Lise Gaudelet",
+  url: "https://clg-avocate.com",
+  email: "clairelise@clg-avocate.com",
+  telephone: "+33 6 71 17 84 05",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "5 rue d'Aboukir",
+    postalCode: "75002",
+    addressLocality: "Paris",
+    addressCountry: "FR",
+  },
+  sameAs: ["https://www.linkedin.com/in/claire-lise-gaudelet-abb082ba"],
+  areaServed: "Paris",
+  knowsAbout: [
+    "Droit du cinéma et de l'audiovisuel",
+    "Droit d'auteur et mandataire d'artistes",
+    "Droit de la presse",
+    "Lutte contre les violences sexistes et sexuelles et toute forme de discrimination",
+  ],
+};
+
 export default function Home() {
   return (
     <main className="page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+
       <section id="presentation" className="section presentation-page">
         <div className="presentation-hero reveal-soft">
           <div className="presentation-portrait">
@@ -46,7 +77,7 @@ export default function Home() {
 
       <section id="expertise" className="section expertise-section">
         <div className="section-title-block reveal-soft">
-          <h1 className="page-title">Expertises</h1>
+          <h2 className="page-title">Expertises</h2>
         </div>
 
         <div className="reveal-soft">
@@ -58,7 +89,7 @@ export default function Home() {
 
       <section id="contact" className="section contact-section">
         <div className="section-title-block reveal-soft">
-          <h1 className="page-title">Contact</h1>
+          <h2 className="page-title">Contact</h2>
         </div>
 
         <div className="contact-layout reveal-soft">

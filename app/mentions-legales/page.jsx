@@ -1,3 +1,29 @@
+const title = "Mentions légales – Claire-Lise Gaudelet, avocate à Paris";
+const description =
+  "Mentions légales de Claire-Lise Gaudelet, avocate au Barreau de Paris : éditrice, coordonnées, informations légales, hébergeur et propriété intellectuelle.";
+
+export const metadata = {
+  title,
+  description,
+  alternates: { canonical: "/mentions-legales" },
+  openGraph: {
+    title,
+    description,
+    url: "/mentions-legales",
+    siteName: "Claire-Lise Gaudelet",
+    locale: "fr_FR",
+    type: "website",
+    images: [
+      {
+        url: "/images/og-portrait.jpg",
+        width: 1200,
+        height: 700,
+        alt: "Portrait de Claire-Lise Gaudelet",
+      },
+    ],
+  },
+};
+
 export default function MentionsLegales() {
   return (
     <main className="page">
