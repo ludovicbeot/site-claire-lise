@@ -1,4 +1,3 @@
-import Script from "next/script";
 import ExpertiseAccordion from "../components/ExpertiseAccordion";
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
 
           <div className="presentation-intro">
             <h1 className="presentation-hero-title">Claire-Lise Gaudelet</h1>
-            <p className="presentation-tagline">Avocate en droit du cinéma, de l'audiovisuel &amp; des médias</p>
+            <p className="presentation-tagline">Avocate en droit du cinéma, de l'audiovisuel<br />&amp; des médias</p>
             <a href="#presentation-detail" className="presentation-link">
               En savoir plus
             </a>
@@ -96,24 +95,8 @@ export default function Home() {
               />
             </svg>
           </a>
-
-          <div className="contact-widget">
-            <a
-              className="avocat-consultingwidget"
-              href="https://consultation.avocat.fr/avocat-61305-20d2.html"
-              data-widget-id="09216e26c7b613b37655"
-            >
-              Consulter mon profil Avocat.fr
-            </a>
-          </div>
         </div>
       </section>
-
-      <Script
-        id="avocat-widget"
-        src="https://consultation.avocat.fr/js/consultingwidget.js"
-        strategy="afterInteractive"
-      />
     </main>
   );
 }
