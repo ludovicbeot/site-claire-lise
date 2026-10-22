@@ -64,7 +64,7 @@ export default function Home() {
         </section>
 
         <section className="presentation-section presentation-section--shifted">
-          <h2 className="presentation-subtitle">Approche et valeurs</h2>
+          <h3 className="presentation-subtitle">Approche et valeurs</h3>
 
           <p className="presentation-row">
             Mon intérêt pour la création artistique et notamment cinématographique m'a permis d'acquérir une connaissance approfondie de ce secteur au-delà des enjeux juridiques qui lui sont propres, me permettant d'avoir une approche globale et inventive de chaque projet. Je souhaite également mettre au centre de mon activité mon engagement dans la lutte contre les violences, harcèlements moraux, sexistes et sexuels et toute forme de discrimination. Mon objectif est d'accompagner et sécuriser la fabrication de projets indépendants et exigeants tout en offrant à chaque personne qui participe au processus créatif les meilleures conditions de travail.
